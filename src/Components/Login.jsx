@@ -15,7 +15,7 @@ const Login = () => {
         <form action="#">
           <div className='input-box'>
             <span className='icon'><FontAwesomeIcon icon={faEnvelope} /></span>
-            <input type="email" required />
+            <input type="text " required />
             <label>Email</label>
           </div>
           <div className='input-box'>
