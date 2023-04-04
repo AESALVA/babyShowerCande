@@ -6,7 +6,7 @@
   align-items: center;
   justify-content: space-between;
   /* background: linear-gradient(180deg,#210e3b, #9b58b6); */
-  background-image: url('../assets/footerBackground.jpg');
+  background-image: url('../assets/backgroundFooter.jpg');
   flex-wrap: wrap;
 }
 
