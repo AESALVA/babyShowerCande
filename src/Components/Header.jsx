@@ -1,12 +1,15 @@
 import React from 'react';
 import '../Styles/header.css';
+import Landing from './Landing';
 
 
 
 const Header = () => {
   return (
     <div className='ContainerHeader'>
-      <h1>¡¡ Bienvenidos !!</h1>
+      <div className='GlassContainer'>
+      <Landing />
+      </div>
     </div>
   )
 }

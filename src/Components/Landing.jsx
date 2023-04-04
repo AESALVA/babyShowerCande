@@ -4,7 +4,7 @@ import '../Styles/landing.css'
 const Landing = () => {
   return (<>
     <div className='ContainerLanding'>
-      <h2>Landing Page</h2>
+    <h1>¡¡ Bienvenidos !!</h1>
     </div>
     </>
   )

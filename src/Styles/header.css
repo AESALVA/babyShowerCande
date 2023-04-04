@@ -1,9 +1,22 @@
 .ContainerHeader{
-    background: url('../assets/headerBackground.jpg');
-    min-width: 100vw;
-    min-height: 90vh;
+    background: url('../assets/headerBackground.jpg') no-repeat;
+    min-width: 100%;
+    min-height: 95vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    
 }
+
+.GlassContainer{
+    max-width:80rem;
+    height: 70vh;
+    border: 2px solid #363636;
+    border-radius: 1rem;
+    backdrop-filter: blur(20px);
+    box-shadow: 0 0 30px #151515;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 3;
+}
+

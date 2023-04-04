@@ -8,8 +8,9 @@
 }
 
 
+
 body{
-  min-width: 100vw;
+  min-width: 50vw;
   min-height: 100vh;
   font-family:'Advent Pro','Oooh Baby'  ;
   background: #151515;
