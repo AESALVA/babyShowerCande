@@ -1,11 +1,15 @@
-import React from "react";
+import React, { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEnvelope, faLock } from "@fortawesome/free-solid-svg-icons";
 import '../Styles/login.css';
 import Nav from 'react-bootstrap/Nav';  
 import '../Styles/passRecovery.css';
 
+
 const PassRecovery = () => {
+
+const [btnName, setBtnName] = useState('Recover');
+
   return (
     <div className="PassRecoveryContainer">
       <div className="form-box passRecovery">
@@ -19,7 +23,7 @@ const PassRecovery = () => {
             <label>Email</label>
           </div>
           <div className="btn">
-            <Nav.Link href="#">Recover</Nav.Link>
+            <Nav.Link href="#">{btnName}</Nav.Link>
           </div>
           <div className="loginRegister">
             <p>An email will be sent to your email account to reset the password</p>
