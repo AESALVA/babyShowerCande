@@ -6,7 +6,7 @@
 
 
 .ContainerFooter{
-    border: 2px solid red;
+    background: url('../assets/footerBackground.jpg');  
     min-height: 10rem;
     display: flex;
     flex-direction: column;

@@ -1,11 +1,12 @@
 .ContainerNavBar {
-  border: 2px solid red;
+  border: 2px solid #151515;
   width: 100%;
   padding: 1rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background-color: #151515;
+  /* background: linear-gradient(180deg,#210e3b, #9b58b6); */
+  background-image: url('../assets/footerBackground.jpg');
   flex-wrap: wrap;
 }
 
@@ -30,13 +31,13 @@
   }
   .NavList li {
     padding: 0 1rem;
-    border-bottom: 2px solid #151515; 
+    border-bottom: 2px solid #5a1177; 
     transition: .35s;
   }
   
   .NavList li:hover{
     transition: .35s;
-    border-bottom: 2px solid #b700ff; 
+    border-bottom: 2px solid #fbf4ff; 
   }
   
   .NavListResponsive{
