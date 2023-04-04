@@ -29,6 +29,9 @@ const Login = () => {
           <div className='btn'>
           <Nav.Link  href='#'>Login</Nav.Link>
           </div>
+          <div className='loginRegister'>
+            <p>Don't have an account?</p><Nav.Link href='#' className='registerLink'>Register</Nav.Link>
+          </div>
         </form>
       </div>
       </div>
