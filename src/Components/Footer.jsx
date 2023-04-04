@@ -4,7 +4,7 @@ import CandelariaLogo from '../assets/CandelariaLogo.jpg';
 import Nav from 'react-bootstrap/Nav';
 
 const Footer = () => {
-  return (
+  return (<>
     <div className='ContainerFooter mt-auto'>
       <div className='Logo'>
         <img src={CandelariaLogo} alt="CandelariaLogo"  />
@@ -17,6 +17,7 @@ const Footer = () => {
       </ul>
       <p>Copyright © 2023 Angel Eduardo Salva</p>
     </div>
+    </>
   )
 }
 

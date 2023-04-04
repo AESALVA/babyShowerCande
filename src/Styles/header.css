@@ -1,0 +1,9 @@
+.ContainerHeader{
+    background: url('../assets/headerBackground.jpg');
+    min-width: 100vw;
+    min-height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}

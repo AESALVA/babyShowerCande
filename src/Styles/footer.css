@@ -7,14 +7,14 @@
 
 .ContainerFooter{
     background: url('../assets/backgroundFooter.jpg');  
-    min-height: 10rem;
+    min-height: 20rem;
     display: flex;
     flex-direction: column;
     align-items: center;
     font-size: 1.2rem;
     padding: 2rem;
     color: #ffff;
-    width: 100%;
+    width: 100vw;
 }
   
 .Logo{
