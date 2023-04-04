@@ -1,0 +1,15 @@
+.RegisterContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40%;
+  height: 70%;
+  position: relative;
+}
+
+.RegisterContainer .form-box {
+    padding: 4rem;
+    width: 100%;
+  }
+
+  
