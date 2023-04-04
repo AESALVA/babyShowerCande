@@ -33,7 +33,7 @@ const handleMenu = ()=>{
       </div>
       <ul className={menuResponsive}>
       <li><Nav.Link href="/"><FontAwesomeIcon icon={faHouse} />{" "}Home</Nav.Link></li>
-        <li><Nav.Link href="#Register"><FontAwesomeIcon icon={faUser} />{" "}Register</Nav.Link></li>
+        <li><Nav.Link href="#Register"><FontAwesomeIcon icon={faUser} />{" "}Login</Nav.Link></li>
         <li><Nav.Link href="#About"><FontAwesomeIcon icon={faFolderOpen} />{" "}About</Nav.Link></li>
         <li><Nav.Link href="#Contact"><FontAwesomeIcon icon={faEnvelopeCircleCheck} />{" "}Contact</Nav.Link></li>
       </ul>
