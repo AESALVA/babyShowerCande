@@ -27,6 +27,7 @@
     border-radius: 50%;
     max-width: 7rem;
     max-height: 7rem;
+    z-index: 1;
   }
   
   .Logo img{
@@ -83,5 +84,11 @@
     .FooterNav{
         padding:2rem 1rem;
         gap: 1rem;
+    }
+  }
+
+  @media (max-height:400px){
+    .ContainerFooter{
+        min-height: 20rem;
     }
   }
