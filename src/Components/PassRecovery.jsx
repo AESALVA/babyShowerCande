@@ -26,7 +26,7 @@ const [btnName, setBtnName] = useState('Recover');
             <Nav.Link href="#">{btnName}</Nav.Link>
           </div>
           <div className="loginRegister">
-            <p>An email will be sent to your email account to reset the password</p>
+            <p>A message will be sent to your email to reset the password</p>
           </div>
         </form>
       </div>

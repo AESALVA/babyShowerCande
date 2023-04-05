@@ -5,6 +5,7 @@ import Login from "./Login";
 import Register from "./Register";
 import PassRecovery from "./PassRecovery";
 import Landing from "./Landing";
+import ResetPassword from "./ResetPassword";
 
 
 const Header = () => {
@@ -16,6 +17,7 @@ const Header = () => {
           <Route path="/babyShowerCande/Login" element={<Login />} />
           <Route path="/babyShowerCande/Register" element={<Register />} />
           <Route path="/babyShowerCande/PassRecovery" element={<PassRecovery />} />
+          <Route path="/babyShowerCande/ResetPassword" element={<ResetPassword />} />
         </Routes>
       </div>
     </div>
