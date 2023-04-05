@@ -14,8 +14,8 @@ const Footer = () => {
       <ul className='FooterNav'>
       <li><NavLink to="/babyShowerCande">Home</NavLink></li>
         <li><NavLink to="/babyShowerCande/Login">Login</NavLink></li>
-        <li><NavLink to="#About">About</NavLink></li>
-        <li><NavLink to="#Contact">Contact</NavLink></li>
+        <li><NavLink to="/babyShowerCande/About">About</NavLink></li>
+        <li><NavLink to="/babyShowerCande/Contact">Contact</NavLink></li>
       </ul>
       <p>Copyright © 2023 Angel Eduardo Salva</p>
     </div>

@@ -27,8 +27,8 @@ const handleMenu = ()=>{
         <ul className='NavList'>
         <li><NavLink to="/babyShowerCande"><FontAwesomeIcon icon={faHouse} />{" "}Home</NavLink></li>
         <li><NavLink to="/babyShowerCande/Login"><FontAwesomeIcon icon={faUser} />{" "}Login</NavLink></li>
-        <li><NavLink to="#About"><FontAwesomeIcon icon={faFolderOpen} />{" "}About</NavLink></li>
-        <li><NavLink to="#Contact"><FontAwesomeIcon icon={faEnvelopeCircleCheck} />{" "}Contact</NavLink></li>
+        <li><NavLink to="/babyShowerCande/About"><FontAwesomeIcon icon={faFolderOpen} />{" "}About</NavLink></li>
+        <li><NavLink to="/babyShowerCande/Contact"><FontAwesomeIcon icon={faEnvelopeCircleCheck} />{" "}Contact</NavLink></li>
     </ul>
       <div className="BarsMenu">
         <FontAwesomeIcon icon={faBars} onClick={handleMenu} />
@@ -36,8 +36,8 @@ const handleMenu = ()=>{
       <ul className={menuResponsive}>
       <li><NavLink to="/babyShowerCande"><FontAwesomeIcon icon={faHouse} />{" "}Home</NavLink></li>
         <li><NavLink to="/babyShowerCande/Login"><FontAwesomeIcon icon={faUser} />{" "}Login</NavLink></li>
-        <li><NavLink to="#About"><FontAwesomeIcon icon={faFolderOpen} />{" "}About</NavLink></li>
-        <li><NavLink to="#Contact"><FontAwesomeIcon icon={faEnvelopeCircleCheck} />{" "}Contact</NavLink></li>
+        <li><NavLink to="/babyShowerCande/About"><FontAwesomeIcon icon={faFolderOpen} />{" "}About</NavLink></li>
+        <li><NavLink to="/babyShowerCande/Contact"><FontAwesomeIcon icon={faEnvelopeCircleCheck} />{" "}Contact</NavLink></li>
       </ul>
       </div>
       
