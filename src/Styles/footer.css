@@ -92,6 +92,12 @@
   color:#fff;
 }
 
+.FooterNav a:hover{
+  filter: drop-shadow(4px 4px 15px #b700ff);
+  color: #b700ff;
+  transition: 0.5s;
+}
+
 .FooterNav a::after {
   content: "";
   position: absolute;
