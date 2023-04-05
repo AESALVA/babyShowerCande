@@ -11,3 +11,50 @@
     padding: 4rem;
     width: 100%;
   }
+
+  @media (max-width: 1100px) {
+    .PassRecoveryContainer {
+      width: 80%;
+    }
+  }
+  
+  @media (max-width: 800px) {
+    .PassRecoveryContainer {
+      width: 80%;
+    }
+    .PassRecoveryContainer .form-box {
+      padding: 1rem;
+    }
+  }
+  
+  @media (max-height: 400px) {
+    .PassRecoveryContainer {
+      width: 90%;
+      height: 10%;
+    }
+    .PassRecoveryContainer h2 {
+      padding: 1rem;
+    }
+    .PassRecoveryContainer .form-box {
+      display: flex;
+      align-items: center;
+      padding: 1rem;
+    }
+  
+    .PassRecoveryContainer form {
+      display: flex;
+      flex-wrap: wrap;
+    }
+  
+    .PassRecoveryContainer form .input-box {
+      padding: 0 4rem;
+      flex-grow: 1;
+      margin: 0;
+    }
+    .forgotPass,
+    .btn,
+    .loginRegister {
+      padding: 0;
+    }
+  }
+  
