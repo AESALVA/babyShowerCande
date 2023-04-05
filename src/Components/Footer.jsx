@@ -2,6 +2,8 @@ import React from 'react';
 import '../Styles/footer.css';
 import CandelariaLogo from '../assets/CandelariaLogo.jpg';
 import Nav from 'react-bootstrap/Nav';
+import { NavLink } from "react-router-dom";
+
 
 const Footer = () => {
   return (<>
@@ -10,10 +12,10 @@ const Footer = () => {
         <img src={CandelariaLogo} alt="CandelariaLogo"  />
       </div>
       <ul className='FooterNav'>
-      <li><Nav.Link href="/">Home</Nav.Link></li>
-        <li><Nav.Link href="#Register">Login</Nav.Link></li>
-        <li><Nav.Link href="#About">About</Nav.Link></li>
-        <li><Nav.Link href="#Contact">Contact</Nav.Link></li>
+      <li><NavLink to="/babyShowerCande">Home</NavLink></li>
+        <li><NavLink to="/babyShowerCande/Login">Login</NavLink></li>
+        <li><NavLink to="#About">About</NavLink></li>
+        <li><NavLink to="#Contact">Contact</NavLink></li>
       </ul>
       <p>Copyright © 2023 Angel Eduardo Salva</p>
     </div>

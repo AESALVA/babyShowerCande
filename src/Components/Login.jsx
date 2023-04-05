@@ -3,6 +3,8 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEnvelope, faLock } from "@fortawesome/free-solid-svg-icons";
 import '../Styles/login.css';
 import Nav from 'react-bootstrap/Nav';
+import { NavLink } from "react-router-dom";
+
 
 
 
@@ -24,13 +26,13 @@ const Login = () => {
             <label>Password</label>
           </div>
           <div className='forgotPass'>
-            <Nav.Link href='#'>Forgot password ?</Nav.Link>
+            <NavLink to='/babyShowerCande/PassRecovery'>Forgot password ?</NavLink>
           </div>
           <div className='btn'>
           <Nav.Link  href='#'>Login</Nav.Link>
           </div>
           <div className='loginRegister'>
-            <p>Don't have an account?</p><Nav.Link href='#' className='registerLink'>Register</Nav.Link>
+            <p>Don't have an account?</p><NavLink to='/babyShowerCande/Register' className='registerLink'>Register</NavLink>
           </div>
         </form>
       </div>

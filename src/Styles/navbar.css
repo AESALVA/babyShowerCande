@@ -36,6 +36,8 @@
 .NavList a{
   position: relative;
   padding: 0 1rem;
+  text-decoration: none;
+  color:#fff;
 }
 
 .NavList a::after {
@@ -60,6 +62,10 @@
 .NavListResponsive {
   display: none;
   transition: 2s ease;
+}
+.NavListResponsive a{
+  text-decoration: none;
+  color:#fff;
 }
 
 @media (max-width: 825px) {

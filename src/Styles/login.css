@@ -64,6 +64,8 @@
 }
 .forgotPass a {
   position: relative;
+  text-decoration: none;
+  color:#fff;
 }
 .forgotPass a::after {
   content: "";
@@ -116,6 +118,8 @@
 }
 .loginRegister a {
   position: relative;
+  text-decoration: none;
+  color:#fff;
 }
 
 .loginRegister a::after {

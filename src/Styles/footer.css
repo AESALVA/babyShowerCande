@@ -88,6 +88,8 @@
 
 .FooterNav a{
   position: relative;
+  text-decoration: none;
+  color:#fff;
 }
 
 .FooterNav a::after {

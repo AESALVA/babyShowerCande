@@ -4,6 +4,8 @@ import Nav from 'react-bootstrap/Nav';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEnvelope, faLock, faUser } from "@fortawesome/free-solid-svg-icons";
 import '../Styles/login.css';
+import { NavLink } from "react-router-dom";
+
 
 
 
@@ -37,9 +39,9 @@ const Register = () => {
           </div>
           <div className="loginRegister">
             <p>Already have an account?</p>
-            <Nav.Link href="#" className="loginLink">
+            <NavLink to="/babyShowerCande/Login" className="loginLink">
               Login
-            </Nav.Link>
+            </NavLink>
           </div>
         </form>
       </div>
