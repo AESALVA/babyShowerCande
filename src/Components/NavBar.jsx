@@ -80,10 +80,11 @@ const NavBar = () => {
             </NavLink>
           </li>
           <li>
-            <NavLink to="/babyShowerCande/Login">
-              <FontAwesomeIcon icon={faUser} />{" "}
-              {!auth.auth.name ? "Login" : auth.auth.name}
-            </NavLink>
+            {!auth.auth.name ? (
+              <NavLink to="/babyShowerCande/Login">Login</NavLink>
+            ) : (
+              <NavLink onClick={auth.logout}>{auth.auth.name}</NavLink>
+            )}
           </li>
           <li>
             <NavLink to="/babyShowerCande/About">

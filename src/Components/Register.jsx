@@ -28,6 +28,7 @@ const Register = () => {
   const [firstPassword, setFirstPassword] = useState(true);
   const [firstMail, setFirstMail] = useState(true);
   const [wrongCredentials, setWrongCredentials] = useState("");
+  const [message, setMessage] = useState("");
 
   const handleClick = () => {
     if (
@@ -39,6 +40,8 @@ const Register = () => {
       auth.setAuth({ name: name, role: "user" });
       auth.addUser({ name: name, mail: mail, password: password, role: "user" });
       navigate("/babyShowerCande");
+    } else {
+      setMessage('You must complete the form');
     }
   };
 
@@ -47,10 +50,16 @@ const Register = () => {
     password !== confirmPass && setWrongCredentials("Passwords not match");
   }, [confirmPass]);
 
+  useEffect(() => {
+   setMessage("");
+  }, [name,mail,password])
+  
+
   return (
     <div className="RegisterContainer">
       <div className="form-box register">
         <h2>Register</h2>
+        <span className="text-danger d-flex justify-content-center">{message}</span>
         <form action="#">
           <div className="input-box">
             <span className="icon">

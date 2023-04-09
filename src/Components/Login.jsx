@@ -4,17 +4,19 @@ import { faEnvelope, faLock } from "@fortawesome/free-solid-svg-icons";
 import "../Styles/login.css";
 import Nav from "react-bootstrap/Nav";
 import { NavLink, useNavigate } from "react-router-dom";
-import { useUserContext, useLoadedContext, useValidationContext } from "../UserProvider";
+import {
+  useUserContext,
+  useLoadedContext,
+  useValidationContext,
+} from "../UserProvider";
 
 const Login = () => {
   const auth = useUserContext();
   const navigate = useNavigate();
 
-
   const Load = useLoadedContext();
 
   const Validation = useValidationContext();
-
 
   const [password, setPassword] = useState("");
   const [mail, setMail] = useState("");
@@ -22,22 +24,24 @@ const Login = () => {
   const [firstMail, setFirstMail] = useState(true);
   const [wrongCredentials, setWrongCredentials] = useState("");
 
-  
   const handleClick = () => {
-    Validation.validateLogin(mail,password);
-    auth.login(mail,password);
-      if(auth.auth.role === false){
-      setWrongCredentials("Wrong Credentials!")}
-      else{
-        navigate("/babyShowerCande");
-      }
-      
+    Validation.validateLogin(mail, password);
+    auth.login(mail, password);
   };
 
   useEffect(() => {
     setWrongCredentials("");
   }, [mail, password]);
 
+  useEffect(() => {
+    if(auth.auth.role){
+      navigate("/babyShowerCande");
+    }
+    if (auth.auth.role === false) {
+      setWrongCredentials("Wrong Credentials!");
+    }
+  }, [auth.auth])
+  
 
   return (
     <>
@@ -56,11 +60,14 @@ const Login = () => {
                 onBlur={() => setFirstMail(false)}
                 required
               />
-              <label>Email{' '}{!Validation.validateMail(mail) && !firstMail && (
+              <label>
+                Email{" "}
+                {!Validation.validateMail(mail) && !firstMail && (
                   <span className="text-danger">
                     You must complete this field
                   </span>
-                )}</label>
+                )}
+              </label>
             </div>
             <div className="input-box">
               <span className="icon">
@@ -82,7 +89,9 @@ const Login = () => {
                 )}
               </label>
             </div>
-            <span className="text-danger d-flex justify-content-center">{wrongCredentials}</span>
+            <span className="text-danger d-flex justify-content-center">
+              {wrongCredentials}
+            </span>
             <div className="forgotPass">
               <NavLink to="/babyShowerCande/PassRecovery">
                 Forgot password ?
