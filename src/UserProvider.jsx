@@ -18,8 +18,10 @@ export function useValidationContext() {
   return useContext(ValidationContext);
 }
 
+
+
 const UserProvider = ({ children }) => {
-  const [auth, setAuth] = useState({ name: "", pass: "", role: "" });
+  const [auth, setAuth] = useState({ name:"", role: "" });
 
   const [isLoaded, setIsLoaded] = useState(false);
 
@@ -58,10 +60,67 @@ const UserProvider = ({ children }) => {
     );
   };
 
+  const validateLogin = async (u, p) => {
+    await fetch("https://babyshowerback.vercel.app/Users/login", {
+      method: "POST",
+      mode: "cors",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({ mail: u, password: p }),
+    })
+      .then((res) => res.json())
+      .then((json) => {
+        if (
+          json.message === "Wrong Credentials" ||
+          json.message === "User not found"
+        ) {
+          setAuth({ user: false, role: false });
+        }
+      });
+  };
+
+  const login = async (u, p) => {
+    await fetch("https://babyshowerback.vercel.app/Users/login", {
+      method: "POST",
+      mode: "cors",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({ mail: u, password: p }),
+    })
+      .then((res) => res.json())
+      .then((json) => {
+        if (json.message === "User and password OK") {
+          setAuth({ name: json.name, role: json.role });
+        }
+      })
+      .catch((error) => setAuth({ user: false, role: false }))
+  };
+
+
+
+
+
+  const addUser = (u) => {
+    fetch("https://babyshowerback.vercel.app/Users/register", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        name: u.name,
+        mail: u.mail,
+        password: u.password,
+        role: u.role,
+      }),
+    });
+  };
+  
+
+
   return (
-    <userContext.Provider value={{ auth, setAuth }}>
+    <userContext.Provider value={{ auth, setAuth, addUser, login }}>
       <LoadedContext.Provider value={{ isLoaded, setIsLoaded }}>
-        <ValidationContext.Provider value={{ validatePassword, validateMail, validateName }}>
+        <ValidationContext.Provider value={{ validatePassword, validateMail, validateName, validateLogin }}>
           {children}
         </ValidationContext.Provider>
       </LoadedContext.Provider>

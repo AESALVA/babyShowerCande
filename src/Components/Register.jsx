@@ -1,10 +1,10 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "../Styles/register.css";
 import Nav from "react-bootstrap/Nav";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEnvelope, faLock, faUser } from "@fortawesome/free-solid-svg-icons";
 import "../Styles/login.css";
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 import {
   useUserContext,
   useLoadedContext,
@@ -13,6 +13,7 @@ import {
 
 const Register = () => {
   const auth = useUserContext();
+  const navigate = useNavigate();
 
   const Load = useLoadedContext();
 
@@ -21,13 +22,30 @@ const Register = () => {
   const [password, setPassword] = useState("");
   const [mail, setMail] = useState("");
   const [name, setName] = useState("");
+  const [confirmPass, setConfirmPass] = useState("");
+
   const [firstName, setFirstName] = useState(true);
   const [firstPassword, setFirstPassword] = useState(true);
   const [firstMail, setFirstMail] = useState(true);
+  const [wrongCredentials, setWrongCredentials] = useState("");
 
   const handleClick = () => {
-    console.log("hola");
+    if (
+      Validation.validateName(name) &&
+      Validation.validateMail(mail) &&
+      Validation.validatePassword(password) &&
+      password === confirmPass
+    ) {
+      auth.setAuth({ name: name, role: "user" });
+      auth.addUser({ name: name, mail: mail, password: password, role: "user" });
+      navigate("/babyShowerCande");
+    }
   };
+
+  useEffect(() => {
+    setWrongCredentials("");
+    password !== confirmPass && setWrongCredentials("Passwords not match");
+  }, [confirmPass]);
 
   return (
     <div className="RegisterContainer">
@@ -92,12 +110,35 @@ const Register = () => {
                   You must complete this field
                 </span>
               )}
+              <span className="text-danger">{wrongCredentials}</span>
+            </label>
+          </div>
+          <div className="input-box">
+            <span className="icon">
+              <FontAwesomeIcon icon={faLock} />
+            </span>
+            <input
+              type="password"
+              value={confirmPass}
+              onChange={(e) => setConfirmPass(e.target.value)}
+              onBlur={() => setFirstPassword(false)}
+              required
+            />
+            <label>
+              Confirm Password{" "}
+              {!Validation.validatePassword(confirmPass) && !firstPassword && (
+                <span className="text-danger">
+                  You must complete this field
+                </span>
+              )}
+              <span className="text-danger">{wrongCredentials}</span>
             </label>
             <p className="d-flex justify-content-center py-2">
-            One uppercase letter, one lowercase letter. Between 8 and 20 characters.
+              One uppercase letter, one lowercase letter. Between 8 and 20
+              characters.
             </p>
           </div>
-          <div onClick={()=>handleClick()} className="btn">
+          <div onClick={() => handleClick()} className="btn">
             <Nav.Link href="#">Register</Nav.Link>
           </div>
           <div className="loginRegister">

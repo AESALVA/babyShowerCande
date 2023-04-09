@@ -22,13 +22,13 @@ const Login = () => {
 
   
   const handleClick = () => {
-    auth.setAuth({ name: mail, pass: password, role: "user" });
+    Validation.validateLogin(mail,password);
+    auth.login(mail,password);
+      auth.auth.role === false &&
+      setWrongCredentials("Wrong Credentials!");
   };
 
-  useEffect(() => {
-    console.log(auth.auth)
-  }, [auth])
-  
+
 
   return (
     <>
