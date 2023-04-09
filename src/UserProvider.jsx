@@ -51,10 +51,17 @@ const UserProvider = ({ children }) => {
     );
   };
 
+  const validateName = (n) => {
+    return (
+      validator.matches(n, "^[a-zA-Z ]*$") &&
+      validator.isLength(n, { min: 5, max: 36 })
+    );
+  };
+
   return (
     <userContext.Provider value={{ auth, setAuth }}>
       <LoadedContext.Provider value={{ isLoaded, setIsLoaded }}>
-        <ValidationContext.Provider value={{ validatePassword, validateMail }}>
+        <ValidationContext.Provider value={{ validatePassword, validateMail, validateName }}>
           {children}
         </ValidationContext.Provider>
       </LoadedContext.Provider>

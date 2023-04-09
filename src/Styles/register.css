@@ -3,13 +3,17 @@
   justify-content: center;
   align-items: center;
   width: 40%;
-  height: 70%;
+  height: 80%;
   position: relative;
 }
 
 .RegisterContainer .form-box {
     padding: 4rem;
     width: 100%;
+  }
+
+  .RegisterContainer .btn{
+    margin-top: 5rem;
   }
 
   @media (max-width: 1100px) {
