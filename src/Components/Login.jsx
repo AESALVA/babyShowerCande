@@ -3,11 +3,13 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEnvelope, faLock } from "@fortawesome/free-solid-svg-icons";
 import "../Styles/login.css";
 import Nav from "react-bootstrap/Nav";
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 import { useUserContext, useLoadedContext, useValidationContext } from "../UserProvider";
 
 const Login = () => {
   const auth = useUserContext();
+  const navigate = useNavigate();
+
 
   const Load = useLoadedContext();
 
@@ -26,6 +28,7 @@ const Login = () => {
     auth.login(mail,password);
       auth.auth.role === false &&
       setWrongCredentials("Wrong Credentials!");
+      navigate("/babyShowerCande");
   };
 
 

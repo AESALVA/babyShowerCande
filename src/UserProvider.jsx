@@ -98,7 +98,9 @@ const UserProvider = ({ children }) => {
       .catch((error) => setAuth({ user: false, role: false }))
   };
 
-
+  const logout = () => {
+    setAuth({ name: "", role: "" });
+  };
 
 
 
@@ -118,7 +120,7 @@ const UserProvider = ({ children }) => {
 
 
   return (
-    <userContext.Provider value={{ auth, setAuth, addUser, login }}>
+    <userContext.Provider value={{ auth, setAuth, addUser, login, logout }}>
       <LoadedContext.Provider value={{ isLoaded, setIsLoaded }}>
         <ValidationContext.Provider value={{ validatePassword, validateMail, validateName, validateLogin }}>
           {children}
