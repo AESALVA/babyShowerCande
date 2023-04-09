@@ -26,11 +26,17 @@ const Login = () => {
   const handleClick = () => {
     Validation.validateLogin(mail,password);
     auth.login(mail,password);
-      auth.auth.role === false &&
-      setWrongCredentials("Wrong Credentials!");
-      navigate("/babyShowerCande");
+      if(auth.auth.role === false){
+      setWrongCredentials("Wrong Credentials!")}
+      else{
+        navigate("/babyShowerCande");
+      }
+      
   };
 
+  useEffect(() => {
+    setWrongCredentials("");
+  }, [mail, password]);
 
 
   return (
