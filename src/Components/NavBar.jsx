@@ -45,7 +45,7 @@ const NavBar = () => {
             {!auth.auth.name ? (
               <>
                 <NavLink to="/babyShowerCande/Login">
-                  <FontAwesomeIcon icon={faUser} />
+                  <FontAwesomeIcon icon={faUser} />{' '}
                   Login
                 </NavLink>
               </>
@@ -55,7 +55,7 @@ const NavBar = () => {
                 placement="bottom"
                 overlay={renderTooltip}
               >
-                <NavLink onClick={auth.logout}>{auth.auth.name}</NavLink>
+                <NavLink onClick={auth.logout}><FontAwesomeIcon icon={faUser} />{'  '}{auth.auth.name}</NavLink>
               </OverlayTrigger>
             )}
           </li>
@@ -81,9 +81,9 @@ const NavBar = () => {
           </li>
           <li>
             {!auth.auth.name ? (
-              <NavLink to="/babyShowerCande/Login">Login</NavLink>
+              <NavLink to="/babyShowerCande/Login"><FontAwesomeIcon icon={faUser} />{' '}Login</NavLink>
             ) : (
-              <NavLink onClick={auth.logout}>{auth.auth.name}</NavLink>
+              <NavLink onClick={auth.logout}><FontAwesomeIcon icon={faUser} />{'  '}{auth.auth.name}</NavLink>
             )}
           </li>
           <li>
