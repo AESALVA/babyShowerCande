@@ -11,6 +11,8 @@ import {
 import { NavLink } from "react-router-dom";
 import { useUserContext } from "../UserProvider";
 import { OverlayTrigger, Tooltip } from "react-bootstrap";
+import Nav from 'react-bootstrap/Nav';
+
 
 const NavBar = () => {
   const auth = useUserContext();
@@ -33,7 +35,7 @@ const NavBar = () => {
 
   return (
     <>
-      <div className="ContainerNavBar">
+      <div id="Home" className="ContainerNavBar">
         <h2>Baby Shower Candelaria</h2>
         <ul className="NavList">
           <li>
@@ -60,14 +62,14 @@ const NavBar = () => {
             )}
           </li>
           <li>
-            <NavLink to="/babyShowerCande/About">
+            <Nav.Link href="#About">
               <FontAwesomeIcon icon={faFolderOpen} /> About
-            </NavLink>
+            </Nav.Link>
           </li>
           <li>
-            <NavLink to="/babyShowerCande/Contact">
+            <Nav.Link href="#Contact">
               <FontAwesomeIcon icon={faEnvelopeCircleCheck} /> Contact
-            </NavLink>
+            </Nav.Link>
           </li>
         </ul>
         <div className="BarsMenu">
@@ -87,14 +89,14 @@ const NavBar = () => {
             )}
           </li>
           <li>
-            <NavLink to="/babyShowerCande/About">
+            <Nav.Link href="#About">
               <FontAwesomeIcon icon={faFolderOpen} /> About
-            </NavLink>
+            </Nav.Link>
           </li>
           <li>
-            <NavLink to="/babyShowerCande/Contact">
+            <Nav.Link href="#Contact">
               <FontAwesomeIcon icon={faEnvelopeCircleCheck} /> Contact
-            </NavLink>
+            </Nav.Link>
           </li>
         </ul>
       </div>

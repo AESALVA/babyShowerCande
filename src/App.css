@@ -1,9 +1,19 @@
-
-
-
-.App{
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
+.Wrapper{
+  height: 100vh;
+  overflow-y: auto;
+  overflow-x: hidden;
+  perspective: 10px;
+  background: url('./assets/headerBackground.jpg');
 }
+
+.header{
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  transform-style: preserve-3d;
+  z-index: -1;
+  flex-wrap: wrap;
+}
+

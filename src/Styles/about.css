@@ -1,0 +1,33 @@
+.ContactAbout {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 10rem;
+}
+
+.Glass{
+  max-width: 80rem;
+  height: 80vh;
+  border: 2px solid #363636;
+  border-radius: 1rem;
+  backdrop-filter: blur(20px);
+  box-shadow: 0 0 30px #151515;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 3;
+  flex-direction: column;
+  margin: 5rem 0;
+}
+
+.text{
+    padding: 6rem;
+}
+
+@media (max-width:800px) {
+    .text{
+        padding: 1rem;
+    }
+}
+

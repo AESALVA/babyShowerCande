@@ -12,7 +12,6 @@
 }
 
 .ContainerFooter {
-  background: url("../assets/backgroundFooter.jpg");
   min-height: 20rem;
   display: flex;
   flex-direction: column;
