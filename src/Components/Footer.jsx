@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import '../Styles/footer.css';
 import CandelariaLogo from '../assets/CandelariaLogo.jpg';
 import { NavLink } from "react-router-dom";
@@ -13,6 +13,7 @@ const Footer = () => {
   const auth = useUserContext();
 
 
+
   return (<>
     <div className='ContainerFooter mt-auto'>
       <div className='Logo'>
@@ -20,7 +21,7 @@ const Footer = () => {
       </div>
       <ul className='FooterNav'>
       <li><Nav.Link href="#Home">Home</Nav.Link></li>
-        <li>{!auth.auth.name?(<Nav.Link href="/babyShowerCande/Login">Login</Nav.Link>):(<NavLink onClick={auth.logout}>{auth.auth.name}</NavLink>)}</li>
+        <li>{!auth.auth.name?(<NavLink onClick={auth.top} to="/babyShowerCande/Login">Login</NavLink>):(<NavLink onClick={auth.logout}>{auth.auth.name}</NavLink>)}</li>
         <li><Nav.Link href="#About">About</Nav.Link></li>
         <li><Nav.Link href="#Contact">Contact</Nav.Link></li>
       </ul>

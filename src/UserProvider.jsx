@@ -118,9 +118,13 @@ const UserProvider = ({ children }) => {
   };
   
 
+  const top = ()=>{
+    window.scrollTo(0);
+  }
+
 
   return (
-    <userContext.Provider value={{ auth, setAuth, addUser, login, logout }}>
+    <userContext.Provider value={{ auth, setAuth, addUser, login, logout, top }}>
       <LoadedContext.Provider value={{ isLoaded, setIsLoaded }}>
         <ValidationContext.Provider value={{ validatePassword, validateMail, validateName, validateLogin }}>
           {children}
