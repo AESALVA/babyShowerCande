@@ -10,6 +10,8 @@ import {
   useLoadedContext,
   useValidationContext,
 } from "../UserProvider";
+import Loader from "./Loader";
+
 
 const Register = () => {
   const auth = useUserContext();
@@ -31,6 +33,7 @@ const Register = () => {
   const [message, setMessage] = useState("");
 
   const handleClick = () => {
+    Load.setIsLoaded(true);
     if (
       Validation.validateName(name) &&
       Validation.validateMail(mail) &&
@@ -54,6 +57,11 @@ const Register = () => {
    setMessage("");
   }, [name,mail,password])
   
+  useEffect(() => {
+    if(auth.auth.role){
+      navigate("/babyShowerCande");
+    }
+  }, [auth.auth])
 
   return (
     <div className="RegisterContainer">
@@ -148,7 +156,7 @@ const Register = () => {
             </p>
           </div>
           <div onClick={() => handleClick()} className="btn">
-            <Nav.Link href="#">Register</Nav.Link>
+            <Nav.Link>{Load.isLoaded?(<Loader />):("Register")}</Nav.Link>
           </div>
           <div className="loginRegister">
             <p>Already have an account?</p>

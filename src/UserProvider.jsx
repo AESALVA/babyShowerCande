@@ -96,6 +96,7 @@ const UserProvider = ({ children }) => {
         }
       })
       .catch((error) => setAuth({ user: false, role: false }))
+      .finally(()=>setIsLoaded(false));
   };
 
   const logout = () => {
@@ -114,7 +115,8 @@ const UserProvider = ({ children }) => {
         password: u.password,
         role: u.role,
       }),
-    });
+    })
+    .finally(()=>setIsLoaded(false));
   };
   
 

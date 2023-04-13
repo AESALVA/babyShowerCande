@@ -9,6 +9,7 @@ import {
   useLoadedContext,
   useValidationContext,
 } from "../UserProvider";
+import Loader from "./Loader";
 
 const Login = () => {
   const auth = useUserContext();
@@ -25,6 +26,7 @@ const Login = () => {
   const [wrongCredentials, setWrongCredentials] = useState("");
 
   const handleClick = () => {
+    Load.setIsLoaded(true);
     Validation.validateLogin(mail, password);
     auth.login(mail, password);
   };
@@ -98,7 +100,7 @@ const Login = () => {
               </NavLink>
             </div>
             <div onClick={() => handleClick()} className="btn">
-              <Nav.Link>Login</Nav.Link>
+              <Nav.Link>{Load.isLoaded?(<><Loader /></>):("Login")}</Nav.Link>
             </div>
             <div className="loginRegister">
               <p>Don't have an account?</p>
