@@ -100,7 +100,7 @@ const Login = () => {
               </NavLink>
             </div>
             <div onClick={() => handleClick()} className="btn">
-              <Nav.Link>{Load.isLoaded?(<><Loader /></>):("Login")}</Nav.Link>
+              <Nav.Link>{Load.isLoaded?(<><Loader /></>):('Login')}</Nav.Link>
             </div>
             <div className="loginRegister">
               <p>Don't have an account?</p>
