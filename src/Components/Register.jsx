@@ -45,7 +45,8 @@ const Register = () => {
       navigate("/babyShowerCande");
     } else {
       setMessage('You must complete the form');
-    }
+      Load.setIsLoaded(false);
+    } 
   };
 
   useEffect(() => {
