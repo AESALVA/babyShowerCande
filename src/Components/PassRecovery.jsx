@@ -27,6 +27,7 @@ const PassRecovery = () => {
 
 
   const handleClick = async () => {
+    setMessage('');
     Validation.validateMail(mail);
     Load.setIsLoaded(true);
     await fetch("https://babyshowerback.vercel.app/Users/forgotPassword", {
@@ -60,9 +61,7 @@ const PassRecovery = () => {
     navigate("/babyShowerCande")
   }
 
-  useEffect(() => {
 
-  }, []);
 
   return (
     <div className="PassRecoveryContainer">
