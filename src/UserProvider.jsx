@@ -60,6 +60,18 @@ const UserProvider = ({ children }) => {
     );
   };
 
+  const validateToken = (n) => {
+    return (
+      validator.matches(n, "^[a-zA-Z0-9]*$") &&
+      validator.isLength(n, { min: 8, max: 50 }) &&
+      validator.isStrongPassword(n,{ minLength: 8, minLowercase: 1, minUppercase: 0, 
+        minNumbers: 1, minSymbols: 0, returnScore: false, 
+        pointsPerUnique: 1, pointsPerRepeat: 0.5, 
+        pointsForContainingLower: 10, pointsForContainingUpper: 10, 
+        pointsForContainingNumber: 10, pointsForContainingSymbol: 10 })
+    );
+  };
+
   const validateLogin = async (u, p) => {
     await fetch("https://babyshowerback.vercel.app/Users/login", {
       method: "POST",
@@ -128,7 +140,7 @@ const UserProvider = ({ children }) => {
   return (
     <userContext.Provider value={{ auth, setAuth, addUser, login, logout, top }}>
       <LoadedContext.Provider value={{ isLoaded, setIsLoaded }}>
-        <ValidationContext.Provider value={{ validatePassword, validateMail, validateName, validateLogin }}>
+        <ValidationContext.Provider value={{ validatePassword, validateMail, validateName, validateLogin, validateToken }}>
           {children}
         </ValidationContext.Provider>
       </LoadedContext.Provider>
