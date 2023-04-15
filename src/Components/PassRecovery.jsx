@@ -20,15 +20,45 @@ const PassRecovery = () => {
 
   const Validation = useValidationContext();
 
-  const [btnName, setBtnName] = useState("Recover");
   const [mail, setMail] = useState("");
   const [firstMail, setFirstMail] = useState(true);
   const [wrongCredentials, setWrongCredentials] = useState("");
+  const [message, setMessage] = useState("");
 
 
-  const handleClick = () => {
+  const handleClick = async () => {
     Validation.validateMail(mail);
+    Load.setIsLoaded(true);
+    await fetch("https://babyshowerback.vercel.app/Users/forgotPassword", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      mode: "cors",
+      body: JSON.stringify({ mail: mail }),
+    })
+      .then((res) => res.json())
+      .then((json) => {
+        if (json.message === "OK MAIL") {
+          setMessage("¡ mail sent successfully !");
+        }
+        if (json.message === "user not found") {
+          setMessage("¡ email is not valid try again !");
+        }
+      })
+      .catch((error) => {
+        if (error) {
+          setMessage("Oops! Something went wrong, try again");
+        }
+      })
+      .finally(() => Load.setIsLoaded(false));
+      setMail("");
+      setFirstMail(true);
   };
+
+  const handleBack = ()=>{
+    navigate("/babyShowerCande")
+  }
 
   useEffect(() => {
 
@@ -53,7 +83,7 @@ const PassRecovery = () => {
             <label>
               Email
               {!Validation.validateMail(mail) && !firstMail && (
-                <span className="text-danger">
+                <span className="text-danger px-3">
                   You must complete this field
                 </span>
               )}
@@ -62,8 +92,9 @@ const PassRecovery = () => {
           <span className="text-danger d-flex justify-content-center py-4">
               {wrongCredentials}
             </span>
+            <span className="text-danger d-flex justify-content-center py-4">{message}</span>
           <div className="btn">
-            <Nav.Link onClick={handleClick}>{btnName}</Nav.Link>
+            {message==="¡ mail sent successfully !"?(<Nav.Link onClick={handleBack}>Go Back</Nav.Link>):(<Nav.Link onClick={handleClick}>{Load.isLoaded?(<><Loader /></>):('Recover')}</Nav.Link>)}
           </div>
           <div className="loginRegister">
             <p>A message will be sent to your email to reset the password</p>
