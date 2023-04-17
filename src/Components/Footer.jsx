@@ -20,7 +20,7 @@ const Footer = () => {
         <img src={CandelariaLogo} alt="CandelariaLogo"  />
       </Nav.Link>
       <ul className='FooterNav'>
-      <li><Nav.Link href='#Home' >Home</Nav.Link></li>
+      <li><NavLink href='/' >Home</NavLink></li>
         <li>{!auth.auth.name?(<NavLink to="/babyShowerCande/Login">Login</NavLink>):(<NavLink onClick={auth.logout}>{auth.auth.name}</NavLink>)}</li>
         <li><Nav.Link href="#About">About</Nav.Link></li>
         <li><Nav.Link href="#Contact">Contact</Nav.Link></li>

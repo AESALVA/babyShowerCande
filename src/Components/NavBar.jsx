@@ -39,7 +39,7 @@ const NavBar = () => {
         <h2>Baby Shower Candelaria</h2>
         <ul className="NavList">
           <li>
-            <NavLink to="/Home">
+            <NavLink to="/">
               <FontAwesomeIcon icon={faHouse} /> Home
             </NavLink>
           </li>
