@@ -39,14 +39,14 @@ const NavBar = () => {
         <h2>Baby Shower Candelaria</h2>
         <ul className="NavList">
           <li>
-            <NavLink to="/babyShowerCande">
+            <NavLink to="/">
               <FontAwesomeIcon icon={faHouse} /> Home
             </NavLink>
           </li>
           <li>
             {!auth.auth.name ? (
               <>
-                <NavLink to="/babyShowerCande/Login">
+                <NavLink to="/Login">
                   <FontAwesomeIcon icon={faUser} />{' '}
                   Login
                 </NavLink>
