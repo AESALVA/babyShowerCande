@@ -16,9 +16,9 @@ const Footer = () => {
 
   return (<>
     <div className='ContainerFooter mt-auto'>
-      <Nav.Link href="/" className='Logo'>
+      <NavLink to="/" className='Logo'>
         <img src={CandelariaLogo} alt="CandelariaLogo"  />
-      </Nav.Link>
+      </NavLink>
       <ul className='FooterNav'>
       <li><NavLink to='/' >Home</NavLink></li>
         <li>{!auth.auth.name?(<NavLink to="/babyShowerCande/Login">Login</NavLink>):(<NavLink onClick={auth.logout}>{auth.auth.name}</NavLink>)}</li>
