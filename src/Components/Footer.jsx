@@ -16,11 +16,11 @@ const Footer = () => {
 
   return (<>
     <div className='ContainerFooter mt-auto'>
-      <Nav.Link href="#Home" className='Logo'>
+      <Nav.Link href="/" className='Logo'>
         <img src={CandelariaLogo} alt="CandelariaLogo"  />
       </Nav.Link>
       <ul className='FooterNav'>
-      <li><NavLink href='/' >Home</NavLink></li>
+      <li><NavLink to='/' >Home</NavLink></li>
         <li>{!auth.auth.name?(<NavLink to="/babyShowerCande/Login">Login</NavLink>):(<NavLink onClick={auth.logout}>{auth.auth.name}</NavLink>)}</li>
         <li><Nav.Link href="#About">About</Nav.Link></li>
         <li><Nav.Link href="#Contact">Contact</Nav.Link></li>
