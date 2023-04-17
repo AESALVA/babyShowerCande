@@ -21,7 +21,7 @@ const Footer = () => {
       </Nav.Link>
       <ul className='FooterNav'>
       <li><Nav.Link href='#Home' >Home</Nav.Link></li>
-        <li>{!auth.auth.name?(<NavLink to="/Login">Login</NavLink>):(<NavLink onClick={auth.logout}>{auth.auth.name}</NavLink>)}</li>
+        <li>{!auth.auth.name?(<NavLink to="/babyShowerCande/Login">Login</NavLink>):(<NavLink onClick={auth.logout}>{auth.auth.name}</NavLink>)}</li>
         <li><Nav.Link href="#About">About</Nav.Link></li>
         <li><Nav.Link href="#Contact">Contact</Nav.Link></li>
       </ul>
