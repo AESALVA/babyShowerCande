@@ -13,7 +13,7 @@ const Header = () => {
   return (
       <div className="GlassContainer">
       <Routes>
-          <Route path="/babyShowerCande" element={<Landing />} />
+          <Route path="/" element={<Landing />} />
           <Route path="/babyShowerCande/Login" element={<Login />} />
           <Route path="/babyShowerCande/Register" element={<Register />} />
           <Route path="/babyShowerCande/PassRecovery" element={<PassRecovery />} />
