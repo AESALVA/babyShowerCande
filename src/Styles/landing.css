@@ -1,19 +1,26 @@
 .ContainerLanding {
   display: flex;
   align-items: center;
-  justify-content: center;
   flex-direction: column;
+  width: 80%;
+  height: 80%;
 }
+
+.LandingTitle{
+    font-size: 5rem;
+}
+
 
 .media-scroller {
   --spacer: 1rem;
   display: grid;
   gap: var(--spacer);
   grid-auto-flow: column;
-  grid-auto-columns: 38%;
+  grid-auto-columns: 28%;
   overflow-x: auto;
   overscroll-behavior: contain;
-  padding: 0 var(--spacer) var(--spacer);
+  padding: 2rem var(--spacer) var(--spacer);
+  width: 100%;
 }
 
 .media-scroller::-webkit-scrollbar-track {
