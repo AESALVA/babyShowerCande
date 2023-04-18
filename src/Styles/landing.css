@@ -40,7 +40,7 @@
   grid-template-rows: min-content;
   gap: var(--spacer);
   padding: var(--spacer);
-  background-color: #363636;
+  background-color:transparent;
   border-radius: 1rem;
 }
 
@@ -64,7 +64,7 @@
         font-size: 3rem;
     }
    .ContainerLanding{
-    width: 50%;
+    width: 70%;
    }
 .media-scroller{
     grid-auto-columns: 58%;
