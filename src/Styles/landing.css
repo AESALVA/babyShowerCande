@@ -58,3 +58,21 @@
 .snaps-inline > .media-element {
   scroll-snap-align: start;
 }
+
+@media (max-width:700px) {
+    .LandingTitle{
+        font-size: 3rem;
+    }
+   .ContainerLanding{
+    width: 50%;
+   }
+.media-scroller{
+    grid-auto-columns: 58%;
+
+}
+
+.media-element > img{
+    aspect-ratio: 9 /12;
+}
+
+}
