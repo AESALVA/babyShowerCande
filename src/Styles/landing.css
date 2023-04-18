@@ -58,7 +58,3 @@
 .snaps-inline > .media-element {
   scroll-snap-align: start;
 }
-
-::-webkit-scrollbar-thumb {
-  background: #363636;
-}
