@@ -22,8 +22,8 @@ const Footer = () => {
       <ul className='FooterNav'>
       <li><NavLink to='/' >Home</NavLink></li>
         <li>{!auth.auth.name?(<NavLink to="/babyShowerCande/Login">Login</NavLink>):(<NavLink onClick={auth.logout}>{auth.auth.name}</NavLink>)}</li>
-        <li><Nav.Link href="#About">About</Nav.Link></li>
-        <li><Nav.Link href="#Contact">Contact</Nav.Link></li>
+        <li><NavLink to="/babyShowerCande/About">About</NavLink></li>
+        <li><NavLink to="/babyShowerCande/Contact">Contact</NavLink></li>
       </ul>
       <p>Copyright © 2023 Angel Eduardo Salva</p>
     </div>

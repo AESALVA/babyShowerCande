@@ -37,7 +37,7 @@ const Login = () => {
 
   useEffect(() => {
     if(auth.auth.role){
-      navigate("/babyShowerCande");
+      navigate("/");
     }
     if (auth.auth.role === false) {
       setWrongCredentials("Wrong Credentials!");

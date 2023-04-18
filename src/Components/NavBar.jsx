@@ -62,14 +62,14 @@ const NavBar = () => {
             )}
           </li>
           <li>
-            <Nav.Link href="#About">
+            <NavLink to="/babyShowerCande/About">
               <FontAwesomeIcon icon={faFolderOpen} /> About
-            </Nav.Link>
+            </NavLink>
           </li>
           <li>
-            <Nav.Link href="#Contact">
+            <NavLink to="/babyShowerCande/Contact">
               <FontAwesomeIcon icon={faEnvelopeCircleCheck} /> Contact
-            </Nav.Link>
+            </NavLink>
           </li>
         </ul>
         <div className="BarsMenu">
@@ -77,7 +77,7 @@ const NavBar = () => {
         </div>
         <ul className={menuResponsive}>
           <li>
-            <NavLink to="/babyShowerCande">
+            <NavLink to="/">
               <FontAwesomeIcon icon={faHouse} /> Home
             </NavLink>
           </li>
@@ -89,14 +89,14 @@ const NavBar = () => {
             )}
           </li>
           <li>
-            <Nav.Link href="#About">
+            <NavLink to="/babyShowerCande/About">
               <FontAwesomeIcon icon={faFolderOpen} /> About
-            </Nav.Link>
+            </NavLink>
           </li>
           <li>
-            <Nav.Link href="#Contact">
+            <NavLink to="/babyShowerCande/Contact">
               <FontAwesomeIcon icon={faEnvelopeCircleCheck} /> Contact
-            </Nav.Link>
+            </NavLink>
           </li>
         </ul>
       </div>

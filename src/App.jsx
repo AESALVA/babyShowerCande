@@ -3,27 +3,29 @@ import Footer from "./Components/Footer";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Header from "./Components/Header";
 import NavBar from "./Components/NavBar";
-import UserProvider from "./UserProvider";
 import Contact from "./Components/Contact";
 import About from "./Components/About";
+import {
+  useUserContext,
+} from "./UserProvider";
 
 
 function App() {
+  const auth = useUserContext();
+
   return (
     <>
-      <UserProvider>
         <div className="Wrapper">
           <NavBar />
           <div className="header">
             <Header />
           </div>
-          <div className="header">
+          {auth.auth.name?(<><div className="header">
             <Contact />
             <About />
             <Footer />
-          </div>
+          </div></>):(<Footer />)}
         </div>
-      </UserProvider>
     </>
   );
 }
