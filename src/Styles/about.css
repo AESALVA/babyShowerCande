@@ -23,7 +23,16 @@
 
 .text{
     padding: 6rem;
+    animation: entrance 400ms ease;
 }
+
+@keyframes entrance {
+  from { transform: translateX(200%);
+  color:transparent }
+  to { transform: translate(0%);
+  color:white;   }
+}
+
 
 @media (max-width:800px) {
     .text{

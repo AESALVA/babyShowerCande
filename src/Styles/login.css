@@ -7,10 +7,13 @@
   position: relative;
 }
 
+
 .LoginContainer .form-box {
   padding:4rem;
   width: 100%;
 }
+
+
 
 .form-box h2 {
   font-size: 3rem;
@@ -23,6 +26,7 @@
   height: 4rem;
   border-bottom: 2px solid #fff;
   margin: 3rem 0;
+  animation: entrance 400ms ease;
 }
 
 .input-box label {
@@ -61,6 +65,7 @@
   display: flex;
   justify-content: flex-end;
   padding: 1rem 0;
+  animation: entrance 400ms ease;
 }
 .forgotPass a {
   position: relative;
@@ -98,6 +103,7 @@
   border: none;
   outline: none;
   padding: 1rem;
+  animation: entrance 400ms ease;
 }
 
 .btn:active {
@@ -112,6 +118,7 @@
   justify-content: center;
   gap: 0.5rem;
   padding: 2rem;
+  animation: entrance 400ms ease;
 }
 .loginRegister p {
   margin: 0;
