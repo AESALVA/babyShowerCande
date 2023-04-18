@@ -1,6 +1,57 @@
-.ContainerLanding{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
+.ContainerLanding {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.media-scroller {
+  --spacer: 1rem;
+  display: grid;
+  gap: var(--spacer);
+  grid-auto-flow: column;
+  grid-auto-columns: 38%;
+  overflow-x: auto;
+  overscroll-behavior: contain;
+  padding: 0 var(--spacer) var(--spacer);
+}
+
+.media-scroller::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.media-scroller::-webkit-scrollbar-thumb {
+  background: #480064;
+}
+
+.media-scroller::-webkit-scrollbar {
+  height: 0.5rem;
+}
+
+.media-element {
+  display: grid;
+  grid-template-rows: min-content;
+  gap: var(--spacer);
+  padding: var(--spacer);
+  background-color: #363636;
+  border-radius: 1rem;
+}
+
+.media-element > img {
+  width: 100%;
+  aspect-ratio: 4 / 4;
+  object-fit: cover;
+}
+
+.snaps-inline {
+  scroll-snap-type: inline mandatory;
+  scroll-padding-inline: var(--spacer);
+}
+
+.snaps-inline > .media-element {
+  scroll-snap-align: start;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #363636;
 }
