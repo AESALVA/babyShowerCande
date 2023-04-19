@@ -1,12 +1,4 @@
-.ContactAbout {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding: 10rem;
-}
-
-.Glass{
+.Glass {
   max-width: 80rem;
   height: 80vh;
   border: 2px solid #363636;
@@ -21,22 +13,24 @@
   margin: 5rem 0;
 }
 
-.text{
-    padding: 6rem;
-    animation: entrance 400ms ease;
+.text {
+  padding: 6rem;
+  animation: entrance 400ms ease;
 }
 
 @keyframes entrance {
-  from { transform: translateX(200%);
-  color:transparent }
-  to { transform: translate(0%);
-  color:white;   }
+  from {
+    transform: translateX(200%);
+    color: transparent;
+  }
+  to {
+    transform: translate(0%);
+    color: white;
+  }
 }
 
-
-@media (max-width:800px) {
-    .text{
-        padding: 1rem;
-    }
+@media (max-width: 800px) {
+  .text {
+    padding: 1rem;
+  }
 }
-

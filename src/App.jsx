@@ -8,6 +8,7 @@ import About from "./Components/About";
 import {
   useUserContext,
 } from "./UserProvider";
+import Dashboard from "./Components/Dashboard";
 
 
 function App() {
@@ -21,8 +22,7 @@ function App() {
             <Header />
           </div>
           {auth.auth.name?(<><div className="header">
-            <Contact />
-            <About />
+            <Dashboard />
             <Footer />
           </div></>):(<Footer />)}
         </div>
