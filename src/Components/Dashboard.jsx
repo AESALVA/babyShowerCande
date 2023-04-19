@@ -8,7 +8,6 @@ const Dashboard = () => {
         <div className="ContainerInputBoard">
         <h3>Deja tu mensaje</h3>
           <div className="formGroup">
-            <label>Comentario</label>
             <input type="text" placeholder="Mensaje"/>
             <button className="formButton">Enviar</button>
           </div>
