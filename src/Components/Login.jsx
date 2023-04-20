@@ -1,6 +1,11 @@
 import React, { useContext, useEffect, useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faEnvelope, faLock } from "@fortawesome/free-solid-svg-icons";
+import {
+  faEnvelope,
+  faLock,
+  faEye,
+  faEyeSlash,
+} from "@fortawesome/free-solid-svg-icons";
 import "../Styles/login.css";
 import Nav from "react-bootstrap/Nav";
 import { NavLink, useNavigate } from "react-router-dom";
@@ -24,6 +29,8 @@ const Login = () => {
   const [firstPassword, setFirstPassword] = useState(true);
   const [firstMail, setFirstMail] = useState(true);
   const [wrongCredentials, setWrongCredentials] = useState("");
+  const [eye, setEye] = useState(false);
+  const [showPass , setShowPass ] = useState('password');
 
   const handleClick = () => {
     Load.setIsLoaded(true);
@@ -31,19 +38,28 @@ const Login = () => {
     auth.login(mail, password);
   };
 
+  const handleEye = () => {
+    if (eye === false) {
+setEye(true);
+setShowPass('text');
+    } else {
+      setEye(false);
+      setShowPass('password');
+    }
+  };
+
   useEffect(() => {
     setWrongCredentials("");
   }, [mail, password]);
 
   useEffect(() => {
-    if(auth.auth.role){
+    if (auth.auth.role) {
       navigate("/");
     }
     if (auth.auth.role === false) {
       setWrongCredentials("Wrong Credentials!");
     }
-  }, [auth.auth])
-  
+  }, [auth.auth]);
 
   return (
     <>
@@ -72,11 +88,19 @@ const Login = () => {
               </label>
             </div>
             <div className="input-box">
-              <span className="icon">
-                <FontAwesomeIcon icon={faLock} />
+              <span onClick={handleEye} className="icon">
+                {!eye ? (
+                  <>
+                    <FontAwesomeIcon icon={faEyeSlash} />
+                  </>
+                ) : (
+                  <>
+                    <FontAwesomeIcon icon={faEye} />
+                  </>
+                )}
               </span>
               <input
-                type="password"
+                type={showPass}
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
                 onBlur={() => setFirstPassword(false)}
@@ -100,7 +124,15 @@ const Login = () => {
               </NavLink>
             </div>
             <div onClick={() => handleClick()} className="btn">
-              <Nav.Link>{Load.isLoaded?(<><Loader /></>):('Login')}</Nav.Link>
+              <Nav.Link>
+                {Load.isLoaded ? (
+                  <>
+                    <Loader />
+                  </>
+                ) : (
+                  "Login"
+                )}
+              </Nav.Link>
             </div>
             <div className="loginRegister">
               <p>Don't have an account?</p>
