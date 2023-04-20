@@ -10,7 +10,7 @@ const Dashboard = () => {
   const Validation = useValidationContext();
   const auth = useUserContext();
 
-  const [message, setMessage] = useState({ message: "", user: "" });
+  const [message, setMessage] = useState({ comment: "", user: "" });
   const [firstMessage, setFirstMessage] = useState(true);
 
   const [containerMessages, setContainerMessages] = useState([]);
@@ -37,7 +37,7 @@ const Dashboard = () => {
           <div className="formGroup">
             <label className="inputLabel">
               Comentario:{" "}
-              {!Validation.validateText(message.message) && !firstMessage && (
+              {!Validation.validateText(message.comment) && !firstMessage && (
                 <span className="text-danger">
                   You must complete this field
                 </span>
@@ -48,7 +48,7 @@ const Dashboard = () => {
               required
               value={message.message}
               onChange={(e) =>
-                setMessage({ message: e.target.value, user: auth.auth.name })
+                setMessage({ comment: e.target.value, user: auth.auth.name })
               }
               onBlur={() => setFirstMessage(false)}
               placeholder="Mensaje"
