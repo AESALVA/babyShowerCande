@@ -22,6 +22,7 @@ const Dashboard = () => {
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(message),
     });
+    setMessage({comment:"", user:""});
   };
 
   useEffect(() => {
@@ -49,7 +50,7 @@ const Dashboard = () => {
             <input
               type="text"
               required
-              value={message.message}
+              value={message.comment}
               onChange={(e) =>
                 setMessage({ comment: e.target.value, user: auth.auth.name })
               }
