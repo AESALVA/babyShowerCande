@@ -2,7 +2,13 @@ import React, { useEffect, useState } from "react";
 import "../Styles/register.css";
 import Nav from "react-bootstrap/Nav";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faEnvelope, faLock, faUser } from "@fortawesome/free-solid-svg-icons";
+import {
+  faEnvelope,
+  faLock,
+  faUser,
+  faEye,
+  faEyeSlash,
+} from "@fortawesome/free-solid-svg-icons";
 import "../Styles/login.css";
 import { NavLink, useNavigate } from "react-router-dom";
 import {
@@ -11,7 +17,6 @@ import {
   useValidationContext,
 } from "../UserProvider";
 import Loader from "./Loader";
-
 
 const Register = () => {
   const auth = useUserContext();
@@ -25,6 +30,10 @@ const Register = () => {
   const [mail, setMail] = useState("");
   const [name, setName] = useState("");
   const [confirmPass, setConfirmPass] = useState("");
+  const [eye, setEye] = useState(false);
+  const [eyeTwo, setEyeTwo] = useState(false);
+  const [showPass, setShowPass] = useState("password");
+  const [showPassTwo, setShowPassTwo] = useState("password");
 
   const [firstName, setFirstName] = useState(true);
   const [firstPassword, setFirstPassword] = useState(true);
@@ -41,12 +50,37 @@ const Register = () => {
       password === confirmPass
     ) {
       auth.setAuth({ name: name, role: "user" });
-      auth.addUser({ name: name, mail: mail, password: password, role: "user" });
+      auth.addUser({
+        name: name,
+        mail: mail,
+        password: password,
+        role: "user",
+      });
       navigate("/babyShowerCande");
     } else {
-      setMessage('You must complete the form');
+      setMessage("You must complete the form");
       Load.setIsLoaded(false);
-    } 
+    }
+  };
+
+  const handleEye = () => {
+    if (eye === false) {
+      setEye(true);
+      setShowPass("text");
+    } else {
+      setEye(false);
+      setShowPass("password");
+    }
+  };
+
+  const handleEyeTwo = () => {
+    if (eyeTwo === false) {
+      setEyeTwo(true);
+      setShowPassTwo("text");
+    } else {
+      setEyeTwo(false);
+      setShowPassTwo("password");
+    }
   };
 
   useEffect(() => {
@@ -55,20 +89,22 @@ const Register = () => {
   }, [confirmPass]);
 
   useEffect(() => {
-   setMessage("");
-  }, [name,mail,password])
-  
+    setMessage("");
+  }, [name, mail, password]);
+
   useEffect(() => {
-    if(auth.auth.role){
+    if (auth.auth.role) {
       navigate("/babyShowerCande");
     }
-  }, [auth.auth])
+  }, [auth.auth]);
 
   return (
     <div className="RegisterContainer">
       <div className="form-box register">
         <h2>Register</h2>
-        <span className="text-danger d-flex justify-content-center">{message}</span>
+        <span className="text-danger d-flex justify-content-center">
+          {message}
+        </span>
         <form action="#">
           <div className="input-box">
             <span className="icon">
@@ -111,11 +147,19 @@ const Register = () => {
             </label>
           </div>
           <div className="input-box">
-            <span className="icon">
-              <FontAwesomeIcon icon={faLock} />
+            <span onClick={handleEye} className="icon">
+              {!eye ? (
+                <>
+                  <FontAwesomeIcon icon={faEyeSlash} />
+                </>
+              ) : (
+                <>
+                  <FontAwesomeIcon icon={faEye} />
+                </>
+              )}
             </span>
             <input
-              type="password"
+              type={showPass}
               value={password}
               onChange={(e) => setPassword(e.target.value)}
               onBlur={() => setFirstPassword(false)}
@@ -132,11 +176,19 @@ const Register = () => {
             </label>
           </div>
           <div className="input-box">
-            <span className="icon">
-              <FontAwesomeIcon icon={faLock} />
+            <span onClick={handleEyeTwo} className="icon">
+              {!eyeTwo ? (
+                <>
+                  <FontAwesomeIcon icon={faEyeSlash} />
+                </>
+              ) : (
+                <>
+                  <FontAwesomeIcon icon={faEye} />
+                </>
+              )}
             </span>
             <input
-              type="password"
+              type={showPassTwo}
               value={confirmPass}
               onChange={(e) => setConfirmPass(e.target.value)}
               onBlur={() => setFirstPassword(false)}
@@ -157,7 +209,7 @@ const Register = () => {
             </p>
           </div>
           <div onClick={() => handleClick()} className="btn">
-            <Nav.Link>{Load.isLoaded?(<Loader />):("Register")}</Nav.Link>
+            <Nav.Link>{Load.isLoaded ? <Loader /> : "Register"}</Nav.Link>
           </div>
           <div className="loginRegister">
             <p>Already have an account?</p>

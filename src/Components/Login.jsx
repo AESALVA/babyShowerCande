@@ -30,7 +30,7 @@ const Login = () => {
   const [firstMail, setFirstMail] = useState(true);
   const [wrongCredentials, setWrongCredentials] = useState("");
   const [eye, setEye] = useState(false);
-  const [showPass , setShowPass ] = useState('password');
+  const [showPass, setShowPass] = useState("password");
 
   const handleClick = () => {
     Load.setIsLoaded(true);
@@ -40,11 +40,11 @@ const Login = () => {
 
   const handleEye = () => {
     if (eye === false) {
-setEye(true);
-setShowPass('text');
+      setEye(true);
+      setShowPass("text");
     } else {
       setEye(false);
-      setShowPass('password');
+      setShowPass("password");
     }
   };
 
