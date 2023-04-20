@@ -8,11 +8,21 @@ import {
 
 const Dashboard = () => {
   const Validation = useValidationContext();
+  const auth = useUserContext();
 
-  const [message, setMessage] = useState("");
+  const [message, setMessage] = useState({ message: "", user: "" });
   const [firstMessage, setFirstMessage] = useState(true);
 
+  const [containerMessages, setContainerMessages] = useState([]);
 
+  const addMessage = () => {
+    setContainerMessages([...containerMessages, message]);
+  };
+
+  useEffect(() => {
+  console.log(containerMessages)
+  }, [message])
+  
 
   return (
     <>
@@ -20,13 +30,25 @@ const Dashboard = () => {
         <div className="ContainerInputBoard">
           <h3>Deja tu mensaje</h3>
           <div className="formGroup">
-            <label className="inputLabel">Comentario:{' '}{!Validation.validateText(message) && !firstMessage && (
-                  <span className="text-danger">
-                    You must complete this field
-                  </span>
-                )}</label>
-            <input type="text" required value={message} onChange={(e) => setMessage(e.target.value)} onBlur={() => setFirstMessage(false)} placeholder="Mensaje" />
-            <button className="formButton">Enviar</button>
+            <label className="inputLabel">
+              Comentario:{" "}
+              {!Validation.validateText(message.message) && !firstMessage && (
+                <span className="text-danger">
+                  You must complete this field
+                </span>
+              )}
+            </label>
+            <input
+              type="text"
+              required
+              value={message.message}
+              onChange={(e) =>
+                setMessage({ message: e.target.value, user: auth.auth })
+              }
+              onBlur={() => setFirstMessage(false)}
+              placeholder="Mensaje"
+            />
+            <button onClick={()=>addMessage()} className="formButton">Enviar</button>
           </div>
         </div>
         <div className="ContainerWall">
