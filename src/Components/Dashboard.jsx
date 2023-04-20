@@ -25,8 +25,10 @@ const Dashboard = () => {
   };
 
   useEffect(() => {
-  console.log(containerMessages)
-  }, [message])
+    fetch("https://babyshowerback.vercel.app/Comments/all")
+    .then((res) => res.json())
+    .then((json) => setContainerMessages(json));
+  }, [])
   
 
   return (
@@ -58,6 +60,12 @@ const Dashboard = () => {
         </div>
         <div className="ContainerWall">
           <div className="ContainerCards">
+            {containerMessages.map((messages)=>{
+              <div className="Card">
+                <h4>{messages.user}</h4>
+                <p>{messages.comment}</p>
+              </div>
+            })}
             <div className="Card">
               <h4>Eduardo</h4>
               <p>
