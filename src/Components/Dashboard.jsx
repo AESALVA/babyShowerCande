@@ -48,7 +48,7 @@ const Dashboard = () => {
               required
               value={message.message}
               onChange={(e) =>
-                setMessage({ message: e.target.value, user: auth.auth })
+                setMessage({ message: e.target.value, user: auth.auth.name })
               }
               onBlur={() => setFirstMessage(false)}
               placeholder="Mensaje"
