@@ -17,6 +17,11 @@ const Dashboard = () => {
 
   const addMessage = () => {
     setContainerMessages([...containerMessages, message]);
+    fetch("https://babyshowerback.vercel.app/Comments/newMessage", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(message),
+    });
   };
 
   useEffect(() => {
