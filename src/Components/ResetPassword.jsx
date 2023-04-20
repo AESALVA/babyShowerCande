@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faEnvelope, faLock } from "@fortawesome/free-solid-svg-icons";
+import { faEnvelope, faLock,  faEye, faEyeSlash, } from "@fortawesome/free-solid-svg-icons";
 import Nav from "react-bootstrap/Nav";
 import "../Styles/resetpassword.css";
 import "../Styles/login.css";
@@ -22,6 +22,10 @@ const ResetPassword = () => {
 
   const [password, setPassword] = useState("");
   const [confirmPass, setConfirmPass] = useState("");
+  const [eye, setEye] = useState(false);
+  const [eyeTwo, setEyeTwo] = useState(false);
+  const [showPass, setShowPass] = useState("password");
+  const [showPassTwo, setShowPassTwo] = useState("password");
   const [token, setToken] = useState("");
 
   const [firstPassword, setFirstPassword] = useState(true);
@@ -61,6 +65,26 @@ const ResetPassword = () => {
   }   
   };
 
+  const handleEye = () => {
+    if (eye === false) {
+      setEye(true);
+      setShowPass("text");
+    } else {
+      setEye(false);
+      setShowPass("password");
+    }
+  };
+
+  const handleEyeTwo = () => {
+    if (eyeTwo === false) {
+      setEyeTwo(true);
+      setShowPassTwo("text");
+    } else {
+      setEyeTwo(false);
+      setShowPassTwo("password");
+    }
+  };
+
   useEffect(() => {
     setWrongCredentials("");
     password !== confirmPass && setWrongCredentials("Passwords not match");
@@ -98,11 +122,19 @@ const ResetPassword = () => {
             <label>Key Token{' '}{!Validation.validateToken(token) && !firstToken && (<span className="text-danger">Wrong Token</span>)}</label>
           </div>
           <div className="input-box">
-            <span className="icon">
-              <FontAwesomeIcon icon={faLock} />
+            <span onClick={handleEye} className="icon">
+            {!eye ? (
+                <>
+                  <FontAwesomeIcon icon={faEyeSlash} />
+                </>
+              ) : (
+                <>
+                  <FontAwesomeIcon icon={faEye} />
+                </>
+              )}
             </span>
             <input
-              type="password"
+              type={showPass}
               value={password}
               onChange={(e) => setPassword(e.target.value)}
               onBlur={() => setFirstPassword(false)}
@@ -116,11 +148,19 @@ const ResetPassword = () => {
               )}</label>
           </div>
           <div className="input-box">
-            <span className="icon">
-              <FontAwesomeIcon icon={faLock} />
+            <span onClick={handleEyeTwo} className="icon">
+            {!eyeTwo ? (
+                <>
+                  <FontAwesomeIcon icon={faEyeSlash} />
+                </>
+              ) : (
+                <>
+                  <FontAwesomeIcon icon={faEye} />
+                </>
+              )}
             </span>
             <input
-              type="password"
+              type={showPassTwo}
               value={confirmPass}
               onChange={(e) => setConfirmPass(e.target.value)}
               onBlur={() => setFirstPassword(false)}
