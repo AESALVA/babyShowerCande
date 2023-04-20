@@ -20,7 +20,7 @@ const Dashboard = () => {
         <div className="ContainerInputBoard">
           <h3>Deja tu mensaje</h3>
           <div className="formGroup">
-            <label className="inputLabel">{!Validation.validateText(message) && !firstMessage && (
+            <label className="inputLabel">Comentario:{' '}{!Validation.validateText(message) && !firstMessage && (
                   <span className="text-danger">
                     You must complete this field
                   </span>
