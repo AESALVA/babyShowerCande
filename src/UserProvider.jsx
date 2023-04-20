@@ -72,6 +72,14 @@ const UserProvider = ({ children }) => {
     );
   };
 
+  const validateText = (t = "hol")=>{
+    let patron = /\w+\s\w+\s?.+/; 
+    return (
+      patron.test(t) &&
+      validator.isLength(t, {min: 8, max:300})
+    )
+  }
+
   const validateLogin = async (u, p) => {
     await fetch("https://babyshowerback.vercel.app/Users/login", {
       method: "POST",
@@ -140,7 +148,7 @@ const UserProvider = ({ children }) => {
   return (
     <userContext.Provider value={{ auth, setAuth, addUser, login, logout, top }}>
       <LoadedContext.Provider value={{ isLoaded, setIsLoaded }}>
-        <ValidationContext.Provider value={{ validatePassword, validateMail, validateName, validateLogin, validateToken }}>
+        <ValidationContext.Provider value={{ validatePassword, validateMail, validateName, validateLogin, validateToken, validateText }}>
           {children}
         </ValidationContext.Provider>
       </LoadedContext.Provider>
