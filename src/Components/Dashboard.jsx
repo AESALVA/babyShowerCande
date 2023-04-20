@@ -31,6 +31,7 @@ const Dashboard = () => {
   }, [auth.auth])
   
 
+
   return (
     <>
       <div className="ContainerDashboard">
@@ -60,12 +61,12 @@ const Dashboard = () => {
         </div>
         <div className="ContainerWall">
           <div className="ContainerCards">
-            {containerMessages.map((messages)=>{
-              <div className="Card">
-                <h4>{messages.user}</h4>
-                <p>{messages.comment}</p>
-              </div>
-            })}
+            {containerMessages.map((message)=>(
+              <div key={message._id} className="Card">
+                <h4>{message.user}</h4>
+                <p>{message.comment}</p>
+                </div>
+            ))}
             <div className="Card">
               <h4>Eduardo</h4>
               <p>
