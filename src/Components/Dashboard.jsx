@@ -61,8 +61,8 @@ const Dashboard = () => {
         </div>
         <div className="ContainerWall">
           <div className="ContainerCards">
-            {containerMessages.map((message)=>(
-              <div key={message._id} className="Card">
+            {containerMessages.map((message,i)=>(
+              <div key={i} className="Card">
                 <h4>{message.user}</h4>
                 <p>{message.comment}</p>
                 </div>
