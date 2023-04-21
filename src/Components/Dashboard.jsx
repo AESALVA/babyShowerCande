@@ -22,16 +22,18 @@ const Dashboard = () => {
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(message),
     });
-    setMessage({comment:"", user:""});
+    setMessage({ comment: "", user: "" });
   };
 
   useEffect(() => {
     fetch("https://babyshowerback.vercel.app/Comments/all")
-    .then((res) => res.json())
-    .then((json) => setContainerMessages(json));
-  }, [auth.auth])
-  
+      .then((res) => res.json())
+      .then((json) => setContainerMessages(json));
+  }, [auth.auth]);
 
+  useEffect(() => {
+    setFirstMessage(true);
+  }, [message]);
 
   return (
     <>
@@ -57,16 +59,18 @@ const Dashboard = () => {
               onBlur={() => setFirstMessage(false)}
               placeholder="Mensaje"
             />
-            <button onClick={()=>addMessage()} className="formButton">Enviar</button>
+            <button onClick={() => addMessage()} className="formButton">
+              Enviar
+            </button>
           </div>
         </div>
         <div className="ContainerWall">
           <div className="ContainerCards">
-            {containerMessages.map((message,i)=>(
+            {containerMessages.map((message, i) => (
               <div key={i} className="Card">
                 <h4>{message.user}</h4>
                 <p>{message.comment}</p>
-                </div>
+              </div>
             ))}
             <div className="Card">
               <h4>Eduardo</h4>
