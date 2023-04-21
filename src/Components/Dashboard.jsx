@@ -16,13 +16,15 @@ const Dashboard = () => {
   const [containerMessages, setContainerMessages] = useState([]);
 
   const addMessage = () => {
-    setContainerMessages([...containerMessages, message]);
-    fetch("https://babyshowerback.vercel.app/Comments/newMessage", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(message),
-    });
-    setMessage({ comment: "", user: "" });
+    if (Validation.validateText(message.comment)) {
+      setContainerMessages([...containerMessages, message]);
+      fetch("https://babyshowerback.vercel.app/Comments/newMessage", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(message),
+      });
+      setMessage({ comment: "", user: "" });
+    }
   };
 
   useEffect(() => {
