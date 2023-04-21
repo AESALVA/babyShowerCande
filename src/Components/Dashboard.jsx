@@ -72,65 +72,6 @@ const Dashboard = () => {
                 <p>{message.comment}</p>
               </div>
             ))}
-            <div className="Card">
-              <h4>Eduardo</h4>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas,
-                deleniti dignissi vero eligendi optio!
-              </p>
-            </div>
-            <div className="Card">
-              <h4>Eduardo :</h4>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas,
-                deleniti dignissimos maiores ducimus magnam ratione provident
-                alias quam iusto adip, vero eligendi optio!
-              </p>
-            </div>
-            <div className="Card">
-              <h4>Eduardo :</h4>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas,
-                deleniti dcimus magnam ratione provident alias quam iusto
-                adipisci reprehenderit fugit, vero eligendi optio!
-              </p>
-            </div>
-            <div className="Card">
-              <h4>Eduardo :</h4>
-              <p>
-                Lorem ips consectetur adipisicing elit. Quas, deleniti
-                dignissimos maiores ducimus magnam ratione provident alias quam
-                iusto adipisci reprehenderit fugit, vero eligendi optio!
-              </p>
-            </div>
-            <div className="Card">
-              <h4>Eduardo :</h4>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas,
-                deleniti dignimus magnam ratione provident alias quam iusto
-                adipisci reprehenderit fugit, vero eligendi optio!
-              </p>
-            </div>
-            <div className="Card">
-              <h4>Eduardo :</h4>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas,
-                deleniti dignisscimus magnam ratione provident alias quam iusto
-                adipisci reprehenderit fugit, vero eligendii dignisscimus magnam
-                ratione provident alias quam iusto adipisci reprehenderit fugit,
-                vero eligen optio!
-              </p>
-            </div>
-            <div className="Card">
-              <h4>Eduardo :</h4>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas,
-                deleniti dignisscimus magnam ratione provident alias quam iusto
-                adipisci reprehenderit fugit, vero eligendii dignisscimus magnam
-                ratione provident alias quam iusto adipisci reprehenderit fugit,
-                vero eligen optio!
-              </p>
-            </div>
           </div>
         </div>
       </div>
