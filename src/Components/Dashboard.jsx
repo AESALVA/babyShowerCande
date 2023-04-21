@@ -5,6 +5,8 @@ import {
   useLoadedContext,
   useValidationContext,
 } from "../UserProvider";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faTrashCan } from "@fortawesome/free-solid-svg-icons";
 
 const Dashboard = () => {
   const Validation = useValidationContext();
@@ -27,6 +29,13 @@ const Dashboard = () => {
     } else {
       setFirstMessage(false);
     }
+  };
+
+  const deleteMessage = (id) => {
+    fetch(`https://babyshowerback.vercel.app/Comments/delete/${id}`, {
+      method: "DELETE",
+      headers: { "Content-Type": "application/json" },
+    });
   };
 
   useEffect(() => {
@@ -72,7 +81,15 @@ const Dashboard = () => {
           <div className="ContainerCards">
             {containerMessages.map((message, i) => (
               <div key={i} className="Card">
-                <h4>{message.user}</h4>
+                <h4 className="cardHeader">
+                  {message.user}
+                  {auth.auth.role === "admin" && (
+                    <FontAwesomeIcon
+                      onClick={() => deleteMessage(message._id)}
+                      icon={faTrashCan}
+                    />
+                  )}
+                </h4>
                 <p>{message.comment}</p>
               </div>
             ))}
