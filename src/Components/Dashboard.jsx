@@ -24,6 +24,8 @@ const Dashboard = () => {
         body: JSON.stringify(message),
       });
       setMessage({ comment: "", user: "" });
+    } else {
+      setFirstMessage(false);
     }
   };
 
