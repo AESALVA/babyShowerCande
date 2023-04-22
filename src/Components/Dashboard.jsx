@@ -83,7 +83,7 @@ const Dashboard = () => {
               <div key={i} className="Card">
                 <h4 className="cardHeader">
                   {message.user}
-                  {auth.auth.role === "admin" && (
+                  {auth.auth.name === "Eduardo" && (
                     <FontAwesomeIcon
                       onClick={() => deleteMessage(message._id)}
                       icon={faTrashCan}

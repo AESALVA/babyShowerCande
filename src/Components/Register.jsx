@@ -94,7 +94,7 @@ const Register = () => {
 
   useEffect(() => {
     if (auth.auth.role) {
-      navigate("/babyShowerCande");
+      navigate("/");
     }
   }, [auth.auth]);
 
