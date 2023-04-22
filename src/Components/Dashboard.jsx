@@ -42,7 +42,7 @@ const Dashboard = () => {
     fetch("https://babyshowerback.vercel.app/Comments/all")
       .then((res) => res.json())
       .then((json) => setContainerMessages(json));
-  }, [auth.auth]);
+  }, [auth.auth,deleteMessage]);
 
   useEffect(() => {
     setFirstMessage(true);

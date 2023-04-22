@@ -76,7 +76,7 @@ outline:0;
     background: linear-gradient(180deg,#151515,#363636);
     padding: 1.5rem;
     width: 20rem;
-    height: 21rem;
+    max-height: 21rem;
     border-radius: .5rem;
 }
 .Card > P{
