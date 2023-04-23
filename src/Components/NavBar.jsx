@@ -17,13 +17,13 @@ import Nav from 'react-bootstrap/Nav';
 const NavBar = () => {
   const auth = useUserContext();
 
-  const [menuResponsive, setMenuResponsive] = useState("d-none");
+  const [menuResponsive, setMenuResponsive] = useState("NavListResponsive");
 
   const handleMenu = () => {
-    if (menuResponsive === "d-none") {
-      setMenuResponsive("NavListResponsive");
+    if (menuResponsive === "NavListResponsive") {
+      setMenuResponsive("NavListResponsiveShow");
     } else {
-      setMenuResponsive("d-none");
+      setMenuResponsive("NavListResponsive");
     }
   };
 

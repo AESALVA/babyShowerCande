@@ -1,5 +1,4 @@
 .ContainerNavBar {
-  border: 2px solid #151515;
   width: 100%;
   padding: 1rem;
   display: flex;
@@ -7,6 +6,8 @@
   justify-content: space-between;
   background: url("../assets/backgroundFooter.jpg") no-repeat;
   flex-wrap: wrap;
+  transition: 400ms ease-in-out;
+
 }
 
 .BarsMenu {
@@ -61,12 +62,23 @@
 
 .NavListResponsive {
   display: none;
-  transition: 2s ease;
+  list-style-type: none;
+  text-decoration: none;
 }
 .NavListResponsive a{
   text-decoration: none;
   color:#fff;
 }
+
+.NavListResponsiveShow a{
+  text-decoration: none;
+  color:#fff;
+}
+
+.NavListResponsiveShow{
+  display: none;  
+}
+
 
 @media (max-width: 850px) {
   .BarsMenu {
@@ -80,10 +92,43 @@
     display: flex;
     flex-direction: column;
     list-style-type: none;
+    position: absolute;
+    top: 6%;
+    left: 0;
     gap: 1rem;
     width: 100%;
-    padding: 1rem;
+    padding: 1rem 1rem 2rem 2rem;
     margin: 0;
-    transition: 2s ease;
+    transform: scale(1,0);
+    transition:transform 400ms ease-in-out;
+    transform-origin: top;
+    background: url("../assets/backgroundFooter.jpg") no-repeat;
   }
+
+  .NavListResponsiveShow{
+    display: flex;
+    flex-direction: column;
+    list-style-type: none;
+    position: absolute;
+    top: 6%;
+    left: 0;
+    gap: 1rem;
+    width: 100%;
+    padding: 1rem 1rem 2rem 2rem;
+    margin: 0;
+    transform: scale(1,1);
+    transition:transform 400ms ease-in-out;
+    transform-origin: top;
+    background: url("../assets/backgroundFooter.jpg") no-repeat;
+  }
+
+  .NavListResponsive a{
+    opacity: 0;
+    transition: opacity 150ms ease-in-out;
+  }
+  .NavListResponsiveShow a{
+    opacity: 1;
+    transition: opacity 350ms ease-in-out 250ms;
+  }
+
 }
