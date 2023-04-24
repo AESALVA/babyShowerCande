@@ -7,6 +7,7 @@ import {
   faUser,
   faFolderOpen,
   faEnvelopeCircleCheck,
+  faXmark
 } from "@fortawesome/free-solid-svg-icons";
 import { NavLink } from "react-router-dom";
 import { useUserContext } from "../UserProvider";
@@ -73,7 +74,7 @@ const NavBar = () => {
           </li>
         </ul>
         <div className="BarsMenu">
-          <FontAwesomeIcon icon={faBars} onClick={handleMenu} />
+          {menuResponsive==='NavListResponsive'?(<FontAwesomeIcon icon={faBars} onClick={handleMenu} />):(<FontAwesomeIcon icon={faXmark} onClick={handleMenu} />)} 
         </div>
         <ul className={menuResponsive}>
           <li>
