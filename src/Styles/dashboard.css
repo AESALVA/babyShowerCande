@@ -71,6 +71,7 @@
   letter-spacing: 0.1rem;
   background: linear-gradient(180deg, #151515, #47195a);
   padding: 0.5rem 2rem;
+  color: #fff;
 }
 
 .Card {
