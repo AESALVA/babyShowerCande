@@ -7,7 +7,7 @@
   background: url("../assets/backgroundFooter.jpg") repeat;
   flex-wrap: wrap;
   transition: 400ms ease-in-out;
-
+  color: #fff;
 }
 
 .BarsMenu {
