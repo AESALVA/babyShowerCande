@@ -38,7 +38,7 @@ const NavBar = () => {
   return (
     <>
       <div id="Home" className="ContainerNavBar">
-        <h2>Baby Shower Candelaria</h2>
+        <h2>Candelaria</h2>
         <ul className="NavList">
           <li>
             <NavLink to="/">
