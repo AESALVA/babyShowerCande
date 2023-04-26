@@ -101,7 +101,7 @@ const Register = () => {
   return (
     <div className="RegisterContainer">
       <div className="form-box register">
-        <h2>Register</h2>
+        <h2>Registrarse</h2>
         <span className="text-danger d-flex justify-content-center">
           {message}
         </span>
@@ -209,12 +209,12 @@ const Register = () => {
             </p>
           </div>
           <div onClick={() => handleClick()} className="btn">
-            <Nav.Link>{Load.isLoaded ? <Loader /> : "Register"}</Nav.Link>
+            <Nav.Link>{Load.isLoaded ? <Loader /> : "Registrarse"}</Nav.Link>
           </div>
           <div className="loginRegister">
-            <p>Already have an account?</p>
+            <p>Ya tienes cuenta?</p>
             <NavLink to="/babyShowerCande/Login" className="loginLink">
-              Login
+              Ingresar
             </NavLink>
           </div>
         </form>

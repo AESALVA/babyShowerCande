@@ -42,7 +42,7 @@ const NavBar = () => {
         <ul className="NavList">
           <li>
             <NavLink to="/">
-              <FontAwesomeIcon icon={faHouse} /> Home
+              <FontAwesomeIcon icon={faHouse} /> Inicio
             </NavLink>
           </li>
           <li>
@@ -50,7 +50,7 @@ const NavBar = () => {
               <>
                 <NavLink to="/babyShowerCande/Login">
                   <FontAwesomeIcon icon={faUser} />{' '}
-                  Login
+                  Ingresar
                 </NavLink>
               </>
             ) : (
@@ -80,12 +80,12 @@ const NavBar = () => {
         <ul className={menuResponsive}>
           <li>
             <NavLink to="/">
-              <FontAwesomeIcon icon={faHouse} /> Home
+              <FontAwesomeIcon icon={faHouse} /> Inicio
             </NavLink>
           </li>
           <li>
             {!auth.auth.name ? (
-              <NavLink to="/babyShowerCande/Login"><FontAwesomeIcon icon={faUser} />{' '}Login</NavLink>
+              <NavLink to="/babyShowerCande/Login"><FontAwesomeIcon icon={faUser} />{' '}Ingresar</NavLink>
             ) : (
               <NavLink onClick={auth.logout}><FontAwesomeIcon icon={faUser} />{'  '}{auth.auth.name}</NavLink>
             )}

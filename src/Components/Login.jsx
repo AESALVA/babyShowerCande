@@ -65,7 +65,7 @@ const Login = () => {
     <>
       <div id="Login" className="LoginContainer">
         <div className="form-box login">
-          <h2>Login</h2>
+          <h2>Ingresar</h2>
           <form action="#">
             <div className="input-box">
               <span className="icon">
@@ -120,7 +120,7 @@ const Login = () => {
             </span>
             <div className="forgotPass">
               <NavLink to="/babyShowerCande/PassRecovery">
-                Forgot password ?
+                Olvidaste tu contraseña ?
               </NavLink>
             </div>
             <div onClick={() => handleClick()} className="btn">
@@ -130,14 +130,14 @@ const Login = () => {
                     <Loader />
                   </>
                 ) : (
-                  "Login"
+                  "Ingresar"
                 )}
               </Nav.Link>
             </div>
             <div className="loginRegister">
-              <p>Don't have an account?</p>
+              <p>No tiene una cuenta?</p>
               <NavLink to="/babyShowerCande/Register" className="registerLink">
-                Register
+                Registrarse
               </NavLink>
             </div>
           </form>

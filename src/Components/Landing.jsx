@@ -19,13 +19,13 @@ const Landing = () => {
         {!auth.auth.name ? (
           <>
             <h3>
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Optio
-              animi sint ullam doloribus in tempore dignissimos commodi
-              inventore ut accusantium debitis delectus excepturi est aut
-              asperiores, corporis recusandae aliquid velit placeat saepe? Iste
-              libero eveniet tenetur consectetur pariatur harum aliquid
-              perspiciatis sit consequatur beatae, odit quod quae et ratione
-              excepturi!
+              ¡Amigos y familiares, gracias por visitar nuestra página!
+            </h3>
+            <h3>
+              Aquí encontraran todo lo necesario para prepararnos para la
+              llegada de la pequeña Candelaria. Si ya se han registrado, hagan
+              clic en el botón de Ingresar para acceder al contenido. Si aún no
+              han completado el registro, los animamos a hacerlo Registrarse.
             </h3>
           </>
         ) : (

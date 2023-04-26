@@ -7,6 +7,10 @@
   color: #fff;
 }
 
+.ContainerLanding > h3{
+  padding: 3rem 0;
+}
+
 .LandingTitle {
   font-size: 4rem;
   text-align: center;
@@ -60,6 +64,12 @@
   scroll-snap-align: start;
 }
 
+@media (max-width:1000px){
+.LandingTitle{
+  font-size: 3rem;
+}
+}
+
 @media (max-width: 700px) {
   .LandingTitle {
     font-size: 2rem;
@@ -67,11 +77,20 @@
   .ContainerLanding {
     width: 70%;
   }
+  .ContainerLanding > h3{
+    padding: 1rem 0;
+  }
   .media-scroller {
     grid-auto-columns: 58%;
   }
 
   .media-element > img {
     aspect-ratio: 9 /12;
+  }
+}
+
+@media (max-width:420px){
+  .ContainerLanding > h3{
+    padding: .5rem 0;
   }
 }

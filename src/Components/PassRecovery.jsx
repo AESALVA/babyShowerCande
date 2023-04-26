@@ -66,7 +66,7 @@ const PassRecovery = () => {
   return (
     <div className="PassRecoveryContainer">
       <div className="form-box passRecovery">
-        <h2>Recover Password</h2>
+        <h2>Recuperar Contraseña</h2>
         <form action="#">
           <div className="input-box">
             <span className="icon">
@@ -93,10 +93,10 @@ const PassRecovery = () => {
             </span>
             <span className="text-danger d-flex justify-content-center py-4">{message}</span>
           <div className="btn">
-            {message==="¡ mail sent successfully !"?(<Nav.Link onClick={handleBack}>Go Back</Nav.Link>):(<Nav.Link onClick={handleClick}>{Load.isLoaded?(<><Loader /></>):('Recover')}</Nav.Link>)}
+            {message==="¡ mail sent successfully !"?(<Nav.Link onClick={handleBack}>Volver</Nav.Link>):(<Nav.Link onClick={handleClick}>{Load.isLoaded?(<><Loader /></>):('Recuperar')}</Nav.Link>)}
           </div>
           <div className="loginRegister">
-            <p>A message will be sent to your email to reset the password</p>
+            <p>Un mensaje se enviará a su cuenta de correo electrónico para restablecer su contraseña</p>
           </div>
         </form>
       </div>
