@@ -15,8 +15,12 @@
 }
 
 .text {
-  padding: 6rem;
+  padding: 2rem 4rem; 
   animation: entrance 400ms ease;
+}
+
+.text h3{
+  padding: 2rem 0;
 }
 
 @keyframes entrance {
@@ -30,8 +34,15 @@
   }
 }
 
-@media (max-width: 800px) {
+@media (max-width: 900px) {
   .text {
     padding: 1rem;
+  }
+}
+
+@media (max-width:580px){
+  .text h3{
+    padding: 1rem;
+    font-size: 1.1rem;
   }
 }

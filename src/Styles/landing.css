@@ -7,10 +7,10 @@
   color: #fff;
 }
 
-.LandingTitle{
-    font-size: 5rem;
+.LandingTitle {
+  font-size: 4rem;
+  text-align: center;
 }
-
 
 .media-scroller {
   --spacer: 1rem;
@@ -41,7 +41,7 @@
   grid-template-rows: min-content;
   gap: var(--spacer);
   padding: var(--spacer);
-  background-color:transparent;
+  background-color: transparent;
   border-radius: 1rem;
 }
 
@@ -60,20 +60,18 @@
   scroll-snap-align: start;
 }
 
-@media (max-width:700px) {
-    .LandingTitle{
-        font-size: 3rem;
-    }
-   .ContainerLanding{
+@media (max-width: 700px) {
+  .LandingTitle {
+    font-size: 2rem;
+  }
+  .ContainerLanding {
     width: 70%;
-   }
-.media-scroller{
+  }
+  .media-scroller {
     grid-auto-columns: 58%;
+  }
 
-}
-
-.media-element > img{
+  .media-element > img {
     aspect-ratio: 9 /12;
-}
-
+  }
 }

@@ -13,12 +13,11 @@ const About = () => {
           Candelaria.
         </h3>
         <h3>
-          En esta página web podrán encontrar información sobre
-          el Baby Shower, junto con algunas fotos y detalles de los
-          preparativos que estamos haciendo para que este día sea inolvidable
-          para todos. Además, encontrarán un muro donde pueden dejar mensajes y
-          expresar sus felicitaciones y buenos deseos para Candelaria y su
-          familia.
+          En esta página web podrán encontrar información sobre el Baby Shower,
+          junto con algunas fotos y detalles que estamos haciendo para que este
+          día sea inolvidable para todos. Además, encontrarán un muro donde
+          pueden dejar mensajes y expresar sus felicitaciones y buenos deseos
+          para Candelaria y su familia.
         </h3>
         <h3>
           Esperamos que disfruten de la página web y se unan a nosotros en la
