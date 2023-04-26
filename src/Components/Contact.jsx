@@ -3,7 +3,7 @@ import React from "react";
 const Contact = () => {
   return (
     <div id="Contact" className="Glass">
-      <h1 className="title">Contact</h1>
+      <h1 className="title">Contacto</h1>
       <div className="text">
         <h3>
           ¡Gracias por visitar nuestra página web y si están interesados en realizar un obsequio,

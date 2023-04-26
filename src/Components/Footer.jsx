@@ -20,10 +20,10 @@ const Footer = () => {
         <img src={CandelariaLogo} alt="CandelariaLogo"  />
       </NavLink>
       <ul className='FooterNav'>
-      <li><NavLink to='/' >Home</NavLink></li>
-        <li>{!auth.auth.name?(<NavLink to="/babyShowerCande/Login">Login</NavLink>):(<NavLink onClick={auth.logout}>{auth.auth.name}</NavLink>)}</li>
-        <li><NavLink to="/babyShowerCande/About">About</NavLink></li>
-        <li><NavLink to="/babyShowerCande/Contact">Contact</NavLink></li>
+      <li><NavLink to='/' >Inicio</NavLink></li>
+        <li>{!auth.auth.name?(<NavLink to="/babyShowerCande/Login">Ingresar</NavLink>):(<NavLink onClick={auth.logout}>{auth.auth.name}</NavLink>)}</li>
+        <li><NavLink to="/babyShowerCande/About">Acerca de</NavLink></li>
+        <li><NavLink to="/babyShowerCande/Contact">Contacto</NavLink></li>
       </ul>
       <p>Copyright © 2023 Angel Eduardo Salva</p>
     </div>
