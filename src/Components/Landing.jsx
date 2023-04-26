@@ -6,6 +6,8 @@ import {
   useLoadedContext,
   useValidationContext,
 } from "../UserProvider";
+import { NavLink } from "react-router-dom";
+
 
 const Landing = () => {
   const auth = useUserContext();
@@ -24,8 +26,8 @@ const Landing = () => {
             <h3>
               Aquí encontraran todo lo necesario para prepararnos para la
               llegada de la pequeña Candelaria. Si ya se han registrado, hagan
-              clic en el botón de Ingresar para acceder al contenido. Si aún no
-              han completado el registro, los animamos a hacerlo Registrarse.
+              clic en <NavLink className="link" to="/babyShowerCande/Login">Ingresar</NavLink>  para acceder al contenido. Si aún no
+              han completado el registro, los animamos a hacerlo <NavLink className="link" to="/babyShowerCande/Register">Registrarse</NavLink> 
             </h3>
           </>
         ) : (

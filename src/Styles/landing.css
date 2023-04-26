@@ -64,6 +64,14 @@
   scroll-snap-align: start;
 }
 
+.link{
+  text-decoration: none;
+  color:#fff;
+}
+.link:hover{
+  color:#b700ff;
+}
+
 @media (max-width:1000px){
 .LandingTitle{
   font-size: 3rem;
