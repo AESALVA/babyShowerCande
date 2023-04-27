@@ -9,6 +9,7 @@
 
 .ContainerLanding > h3{
   padding: 3rem 0;
+  animation: entrance 400ms ease;
 }
 
 .LandingTitle {
