@@ -34,6 +34,9 @@
     .RegisterContainer .form-box {
       padding: 1rem;
     }
+    .form-box > h2{
+      font-size: 2rem;
+    }
   }
   
   @media (max-height: 400px) {

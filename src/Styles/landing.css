@@ -66,10 +66,10 @@
 
 .link{
   text-decoration: none;
-  color:#fff;
+  color:#b700ff;
 }
 .link:hover{
-  color:#b700ff;
+  color:#fff;
 }
 
 @media (max-width:1000px){
