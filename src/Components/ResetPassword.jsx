@@ -100,13 +100,13 @@ const ResetPassword = () => {
   return (
     <div className="ResetContainer">
       <div className="form-box ResetPassword">
-        <h2>Password reset form</h2>
+        <h2>Formulario para restablecer contraseña</h2>
         <form action="#">
           <div className="Requirements">
-            <p>The new password must have at least: </p>
+            <p>La nueva contraseña debe tener al menos: </p>
             <ul>
-              <li>One uppercase letter, one lowercase letter.</li>
-              <li>Have between 8 and 20 characters.</li>
+              <li>Una letra mayúscula, una letra minúscula.</li>
+              <li>Tener entre 8 y 20 caracteres.</li>
             </ul>
           </div>
           <div className="input-box">
@@ -119,7 +119,7 @@ const ResetPassword = () => {
             value={token}
             onChange={(e) => setToken(e.target.value)}
             onBlur={() => setFirstToken(false)} />
-            <label>Key Token{' '}{!Validation.validateToken(token) && !firstToken && (<span className="text-danger">Wrong Token</span>)}</label>
+            <label>Clave Token{' '}{!Validation.validateToken(token) && !firstToken && (<span className="text-danger">Token incorrecto</span>)}</label>
           </div>
           <div className="input-box">
             <span onClick={handleEye} className="icon">
@@ -140,10 +140,10 @@ const ResetPassword = () => {
               onBlur={() => setFirstPassword(false)}
               required
             />
-            <label>Password{" "}
+            <label>Contraseña{" "}
               {!Validation.validatePassword(password) && !firstPassword && (
                 <span className="text-danger">
-                  You must complete this field
+                  Completar
                 </span>
               )}</label>
           </div>
@@ -166,17 +166,17 @@ const ResetPassword = () => {
               onBlur={() => setFirstPassword(false)}
               required
             />
-            <label>Repeat Password{" "}
+            <label>Repetir contraseña{" "}
               {!Validation.validatePassword(confirmPass) && !firstPassword && (
                 <span className="text-danger">
-                  You must complete this field
+                  Completar
                 </span>
               )}</label>
           </div>
           <span className="text-danger d-flex justify-content-center">{wrongCredentials}</span>
           <span className="text-danger d-flex justify-content-center">{message}</span>
           <div className="btn">
-          {message==="Password updated successfully !"?(<Nav.Link onClick={handleBack}>Go Back</Nav.Link>):(<Nav.Link onClick={handleClick}>{Load.isLoaded?(<><Loader /></>):('Submit')}</Nav.Link>)}
+          {message==="Password updated successfully !"?(<Nav.Link onClick={handleBack}>Volver</Nav.Link>):(<Nav.Link onClick={handleClick}>{Load.isLoaded?(<><Loader /></>):('Enviar')}</Nav.Link>)}
           </div>
         </form>
       </div>
