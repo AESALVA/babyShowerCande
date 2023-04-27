@@ -60,7 +60,7 @@ const ResetPassword = () => {
       .catch((error)=>setMessage("Oops something went wrong try again !"));
       
   }else{
-    setMessage("Fill out the form correctly");
+    setMessage("Completar el formulario correctamente");
     Load.setIsLoaded(false);
   }   
   };
@@ -87,7 +87,7 @@ const ResetPassword = () => {
 
   useEffect(() => {
     setWrongCredentials("");
-    password !== confirmPass && setWrongCredentials("Passwords not match");
+    password !== confirmPass && setWrongCredentials("Contraseñas no coinciden");
   }, [confirmPass]);
 
   useEffect(() => {
