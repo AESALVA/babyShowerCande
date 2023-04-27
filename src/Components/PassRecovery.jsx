@@ -83,7 +83,7 @@ const PassRecovery = () => {
               Email
               {!Validation.validateMail(mail) && !firstMail && (
                 <span className="text-danger px-3">
-                  You must complete this field
+                  Completar
                 </span>
               )}
             </label>

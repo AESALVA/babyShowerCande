@@ -58,7 +58,7 @@ const Register = () => {
       });
       navigate("/babyShowerCande");
     } else {
-      setMessage("You must complete the form");
+      setMessage("Debe completar el formulario");
       Load.setIsLoaded(false);
     }
   };
@@ -85,7 +85,7 @@ const Register = () => {
 
   useEffect(() => {
     setWrongCredentials("");
-    password !== confirmPass && setWrongCredentials("Passwords not match");
+    password !== confirmPass && setWrongCredentials("Contraseñas no coinciden");
   }, [confirmPass]);
 
   useEffect(() => {
@@ -121,7 +121,7 @@ const Register = () => {
               Username{" "}
               {!Validation.validateName(name) && !firstName && (
                 <span className="text-danger">
-                  You must complete this field
+                  Completar
                 </span>
               )}
             </label>
@@ -141,7 +141,7 @@ const Register = () => {
               Email{" "}
               {!Validation.validateMail(mail) && !firstMail && (
                 <span className="text-danger">
-                  You must complete this field
+                  Completar
                 </span>
               )}
             </label>
@@ -166,10 +166,10 @@ const Register = () => {
               required
             />
             <label>
-              Password{" "}
+              Contraseña{" "}
               {!Validation.validatePassword(password) && !firstPassword && (
                 <span className="text-danger">
-                  You must complete this field
+                  Completar
                 </span>
               )}
               <span className="text-danger">{wrongCredentials}</span>
@@ -195,10 +195,10 @@ const Register = () => {
               required
             />
             <label>
-              Confirm Password{" "}
+              Confirmar Contraseña{" "}
               {!Validation.validatePassword(confirmPass) && !firstPassword && (
                 <span className="text-danger">
-                  You must complete this field
+                  Completar
                 </span>
               )}
               <span className="text-danger">{wrongCredentials}</span>

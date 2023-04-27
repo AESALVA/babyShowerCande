@@ -57,7 +57,7 @@ const Login = () => {
       navigate("/");
     }
     if (auth.auth.role === false) {
-      setWrongCredentials("Wrong Credentials!");
+      setWrongCredentials("Credenciales incorrectas!");
     }
   }, [auth.auth]);
 
@@ -82,7 +82,7 @@ const Login = () => {
                 Email{" "}
                 {!Validation.validateMail(mail) && !firstMail && (
                   <span className="text-danger">
-                    You must complete this field
+                    Completar
                   </span>
                 )}
               </label>
@@ -107,10 +107,10 @@ const Login = () => {
                 required
               />
               <label>
-                Password{" "}
+                Contraseña{" "}
                 {!Validation.validatePassword(password) && !firstPassword && (
                   <span className="text-danger">
-                    You must complete this field
+                    Completar
                   </span>
                 )}
               </label>
