@@ -118,7 +118,7 @@ const Register = () => {
               required
             />
             <label>
-              Username{" "}
+              Nombre{" "}
               {!Validation.validateName(name) && !firstName && (
                 <span className="text-danger">
                   Completar
@@ -204,8 +204,8 @@ const Register = () => {
               <span className="text-danger">{wrongCredentials}</span>
             </label>
             <p className="d-flex justify-content-center py-2">
-              One uppercase letter, one lowercase letter. Between 8 and 20
-              characters.
+             Una letra mayúscula, una letra minúscula. Entre 8 y 20
+              caracteres.
             </p>
           </div>
           <div onClick={() => handleClick()} className="btn">

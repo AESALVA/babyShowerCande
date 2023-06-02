@@ -12,17 +12,10 @@
 
 .BarsMenu {
   padding: 0.4rem 0.5rem;
-  border: 3px solid #363636;
-  border-radius: 0.5rem;
   display: none;
+  font-size: 1.5rem;
 }
 
-.BarsMenu:active {
-  transition: all;
-  transform: scale(0.9);
-  transition-duration: 100ms;
-  transition-timing-function: ease-in-out;
-}
 
 .NavList {
   display: flex;

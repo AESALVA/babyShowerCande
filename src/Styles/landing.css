@@ -22,7 +22,7 @@
   display: grid;
   gap: var(--spacer);
   grid-auto-flow: column;
-  grid-auto-columns: 28%;
+  grid-auto-columns: 38%;
   overflow-x: auto;
   overscroll-behavior: contain;
   padding: 2rem var(--spacer) var(--spacer);
@@ -90,7 +90,7 @@
     padding: 1rem 0;
   }
   .media-scroller {
-    grid-auto-columns: 58%;
+    grid-auto-columns: 80%;
   }
 
   .media-element > img {
