@@ -58,7 +58,7 @@ const PassRecovery = () => {
   };
 
   const handleBack = ()=>{
-    navigate("/babyShowerCande")
+    navigate("/")
   }
 
 
