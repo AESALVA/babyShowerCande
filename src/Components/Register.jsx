@@ -56,7 +56,7 @@ const Register = () => {
         password: password,
         role: "user",
       });
-      navigate("/babyShowerCande");
+      navigate("/");
     } else {
       setMessage("Debe completar el formulario");
       Load.setIsLoaded(false);

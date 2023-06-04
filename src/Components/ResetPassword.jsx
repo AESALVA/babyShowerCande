@@ -35,7 +35,7 @@ const ResetPassword = () => {
   const [message, setMessage] = useState("");
 
   const handleBack = () => {
-    navigate("/babyShowerCande");
+    navigate("/");
   };
 
   const handleClick =async () => {
