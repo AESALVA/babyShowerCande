@@ -12,3 +12,9 @@
     flex-grow: 3;
 }
 
+@media (max-width: 700px) {
+    .GlassContainer{
+        height: auto;
+        padding: 2rem 0;
+    }
+}
