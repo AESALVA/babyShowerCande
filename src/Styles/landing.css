@@ -54,8 +54,13 @@
   width: 100%;
   aspect-ratio: 4 / 4;
   object-fit: contain;
+  filter: drop-shadow(4px 4px 15px #fff);
+  transition: filter 450ms ease-in;
 }
-
+.media-element > img:hover{
+  filter: drop-shadow(4px 4px 15px #b700ff);
+  transition: filter 450ms ease-in;
+}
 .snaps-inline {
   scroll-snap-type: inline mandatory;
   scroll-padding-inline: var(--spacer);
