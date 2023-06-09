@@ -7,6 +7,18 @@ import {
   useValidationContext,
 } from "../UserProvider";
 import { NavLink } from "react-router-dom";
+import imgUno from '../assets/carousel/foto1.jpg';
+import imgDos from '../assets/carousel/foto2.jpg';
+import imgTres from '../assets/carousel/foto4.jpg';
+import imgCuatro from '../assets/carousel/foto5.jpg';
+import imgCinco from '../assets/carousel/foto6.jpg';
+import imgSeis from '../assets/carousel/foto7.jpg';
+import imgSiete from '../assets/carousel/foto8.jpg';
+import imgOcho from '../assets/carousel/foto9.jpg';
+import imgNueve from '../assets/carousel/foto10.jpg';
+import imgDiez from '../assets/carousel/foto12.jpg';
+import imgOnce from '../assets/carousel/foto16.jpg';
+
 
 
 const Landing = () => {
@@ -34,34 +46,37 @@ const Landing = () => {
           <>
             <div className="media-scroller snaps-inline">
               <div className="media-element">
-                <img src={img} alt="" />
+                <img src={imgUno} alt="fotouno" />
               </div>
               <div className="media-element">
-                <img src={img} alt="" />
+                <img src={imgDos} alt="" />
               </div>
               <div className="media-element">
-                <img src={img} alt="" />
+                <img src={imgTres} alt="" />
               </div>
               <div className="media-element">
-                <img src={img} alt="" />
+                <img src={imgCuatro} alt="" />
               </div>
               <div className="media-element">
-                <img src={img} alt="" />
+                <img src={imgCinco} alt="" />
               </div>
               <div className="media-element">
-                <img src={img} alt="" />
+                <img src={imgSeis} alt="" />
               </div>
               <div className="media-element">
-                <img src={img} alt="" />
+                <img src={imgSiete} alt="" />
               </div>
               <div className="media-element">
-                <img src={img} alt="" />
+                <img src={imgOcho} alt="" />
               </div>
               <div className="media-element">
-                <img src={img} alt="" />
+                <img src={imgNueve} alt="" />
               </div>
               <div className="media-element">
-                <img src={img} alt="" />
+                <img src={imgDiez} alt="" />
+              </div>
+              <div className="media-element">
+                <img src={imgOnce} alt="" />
               </div>
             </div>
           </>

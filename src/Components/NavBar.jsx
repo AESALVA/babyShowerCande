@@ -31,7 +31,7 @@ const NavBar = () => {
 
   const renderTooltip = (props) => (
     <Tooltip id="button-tooltip" {...props}>
-      Log Out
+      Cerran Sesión
     </Tooltip>
   );
 
