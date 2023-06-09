@@ -52,10 +52,10 @@ const Dashboard = () => {
     <>
       <div className="ContainerDashboard">
         <div className="ContainerInputBoard">
-          <h3>Deja tu mensaje</h3>
+          <h3>¡ ¡ Te invitamos a dejar un mensaje para Candelaria y su familia ! !</h3>
           <div className="formGroup">
             <label className="inputLabel">
-              Comentario:{" "}
+              Mensaje:{" "}
               {!Validation.validateText(message.comment) && !firstMessage && (
                 <span className="text-danger">
                   You must complete this field
