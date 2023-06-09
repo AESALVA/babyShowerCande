@@ -18,6 +18,10 @@ import imgOcho from '../assets/carousel/foto9.jpg';
 import imgNueve from '../assets/carousel/foto10.jpg';
 import imgDiez from '../assets/carousel/foto12.jpg';
 import imgOnce from '../assets/carousel/foto16.jpg';
+import imgDoce from '../assets/carousel/foto19.jpg';
+import imgTrece from '../assets/carousel/foto20.jpg';
+
+
 
 
 
@@ -58,6 +62,9 @@ const Landing = () => {
                 <img src={imgCuatro} alt="" />
               </div>
               <div className="media-element">
+                <img src={imgTrece} alt="" />
+              </div>
+              <div className="media-element">
                 <img src={imgCinco} alt="" />
               </div>
               <div className="media-element">
@@ -68,6 +75,9 @@ const Landing = () => {
               </div>
               <div className="media-element">
                 <img src={imgOcho} alt="" />
+              </div>
+              <div className="media-element">
+                <img src={imgDoce} alt="" />
               </div>
               <div className="media-element">
                 <img src={imgNueve} alt="" />
