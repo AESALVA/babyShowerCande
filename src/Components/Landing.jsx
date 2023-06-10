@@ -31,19 +31,17 @@ const Landing = () => {
   return (
     <>
       <div className="ContainerLanding">
-        <h1 className="LandingTitle">
-          ¡Bienvenidos a la página web del Baby Shower de Candelaria!
-        </h1>
         {!auth.auth.name ? (
           <>
             <h3>
-              ¡Amigos y familiares, gracias por visitar nuestra página!
+              Aqui podran encontrar algunas imagenes familiares, conocer un poco mas acerca del bello nombre que elegimos para nuestra pequeña y podran dejar sus mensajes y/o deseos especialmente para ella.
             </h3>
             <h3>
-              Aquí encontraran todo lo necesario para prepararnos para la
-              llegada de la pequeña Candelaria. Si ya se han registrado, hagan
-              clic en <NavLink className="link" to="/babyShowerCande/Login">Ingresar</NavLink>  para acceder al contenido. Si aún no
-              han completado el registro, los animamos a hacerlo <NavLink className="link" to="/babyShowerCande/Register">Registrarse</NavLink> 
+              Es por eso que te invitamos a <NavLink className="link" to="/babyShowerCande/Register">Registrarte</NavLink> o si ya lo hiciste, podes hacer
+              click en <NavLink className="link" to="/babyShowerCande/Login">Ingresar</NavLink>.
+            </h3>
+            <h3>
+              Esperamos que les guste este espacio realizado con mucho amor. Gracias!
             </h3>
           </>
         ) : (

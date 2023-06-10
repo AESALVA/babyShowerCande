@@ -65,12 +65,12 @@ const NavBar = () => {
           </li>
           <li>
             <NavLink to="/babyShowerCande/About">
-              <FontAwesomeIcon icon={faFolderOpen} /> Acerca de
+              <FontAwesomeIcon icon={faFolderOpen} /> Mi nombre
             </NavLink>
           </li>
           <li>
             <NavLink to="/babyShowerCande/Contact">
-              <FontAwesomeIcon icon={faEnvelopeCircleCheck} /> Contacto
+              <FontAwesomeIcon icon={faEnvelopeCircleCheck} /> Regalos
             </NavLink>
           </li>
         </ul>
@@ -92,12 +92,12 @@ const NavBar = () => {
           </li>
           <li>
             <NavLink to="/babyShowerCande/About">
-              <FontAwesomeIcon icon={faFolderOpen} /> Acerca de
+              <FontAwesomeIcon icon={faFolderOpen} /> Mi nombre
             </NavLink>
           </li>
           <li>
             <NavLink to="/babyShowerCande/Contact">
-              <FontAwesomeIcon icon={faEnvelopeCircleCheck} /> Contacto
+              <FontAwesomeIcon icon={faEnvelopeCircleCheck} /> Regalos
             </NavLink>
           </li>
         </ul>

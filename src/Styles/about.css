@@ -13,7 +13,9 @@
   margin: 5rem 0;
   color: #fff;
 }
-
+.title{
+text-align: center;
+}
 .text {
   padding: 2rem 4rem; 
   animation: entrance 400ms ease;
@@ -21,6 +23,7 @@
 
 .text h3{
   padding: 2rem 0;
+  text-align: center;
 }
 
 @keyframes entrance {

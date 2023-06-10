@@ -9,6 +9,7 @@ import {
   useUserContext,
 } from "./UserProvider";
 import Dashboard from "./Components/Dashboard";
+import Hero from "./Components/Hero";
 
 
 function App() {
@@ -18,10 +19,13 @@ function App() {
     <>
         <div className="Wrapper">
           <NavBar />
+          <Hero />
           <div className="header">
             <Header />
           </div>
           {auth.auth.name?(<><div className="header">
+            <About />
+            <Contact />
             <Dashboard />
             <Footer />
           </div></>):(<Footer />)}

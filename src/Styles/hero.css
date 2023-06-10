@@ -1,0 +1,31 @@
+.ContainerHero{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 1rem;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+.HeroText{
+    color: black;
+    text-align: center;
+    width: 20rem;
+    position: absolute;
+    top: 60%;
+    padding: 1rem;
+}
+.imgElephant >img{
+    border-radius: 1rem;
+    opacity: .8;
+    width: 100%;
+}
+
+@media(max-width:750px){
+    .HeroText{
+        width: 15rem;
+    }
+    .HeroText h3{
+        font-size: 1rem;
+    }
+}

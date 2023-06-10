@@ -4,24 +4,20 @@ import "../Styles/about.css";
 const About = () => {
   return (
     <div id="About" className="Glass">
-      <h1 className="title">Sobre la página web</h1>
+      <h1 className="title">Mi nombre</h1>
       <div className="text">
         <h3>
-          Estamos muy emocionados de compartir este momento especial con todos
-          ustedes, y no podemos esperar para que se unan a nosotros en la
-          celebración del próximo capítulo en la vida de nuestra pequeña
-          Candelaria.
+          Dios ha querido bendecirnos e iluminarnos con su llegada... Candelaria
+          "Luz" o "La que resplandece", es el nombre que se le da a la fiesta de
+          la "Presentacion de Jesus en el templo de jerusalem" y que era tambien
+          llamada de "La purificacion de Maria" . Cristo la luz del mundo
+          presentado por su madre en el templo viene a iluminar a todos como la
+          vela o las candelas, de donde se deriva la advocacion de la Virgen de
+          la Candelaria, cuya fiesta se celebra el 2 de febrero.
         </h3>
         <h3>
-          En esta página web podrán encontrar información sobre el Baby Shower,
-          junto con algunas fotos y detalles que estamos haciendo para que este
-          día sea inolvidable para todos. Además, encontrarán un muro donde
-          pueden dejar mensajes y expresar sus felicitaciones y buenos deseos
-          para Candelaria y su familia.
-        </h3>
-        <h3>
-          Esperamos que disfruten de la página web y se unan a nosotros en la
-          celebración de este hermoso momento.
+          ¡ Oh , Virgen Santisima de la Candelaria acompañanos en su llegada e
+          ilumina su vida con tu luz ! .
         </h3>
       </div>
     </div>

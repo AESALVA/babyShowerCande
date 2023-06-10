@@ -15,6 +15,8 @@
 .LandingTitle {
   font-size: 4rem;
   text-align: center;
+  color: #fff;
+  padding:1rem;
 }
 
 .media-scroller {
@@ -22,7 +24,7 @@
   display: grid;
   gap: var(--spacer);
   grid-auto-flow: column;
-  grid-auto-columns: 38%;
+  grid-auto-columns: 50%;
   overflow-x: auto;
   overscroll-behavior: contain;
   padding: 2rem var(--spacer) var(--spacer);

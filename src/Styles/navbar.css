@@ -96,6 +96,7 @@
     transition:transform 400ms ease-in-out;
     transform-origin: top;
     background: url("../assets/backgroundFooter.jpg") no-repeat;
+    z-index: 11;
   }
 
   .NavListResponsiveShow{
@@ -113,6 +114,7 @@
     transition:transform 400ms ease-in-out;
     transform-origin: top;
     background: url("../assets/backgroundFooter.jpg") no-repeat;
+    z-index: 11;
   }
 
   .NavListResponsive a{
