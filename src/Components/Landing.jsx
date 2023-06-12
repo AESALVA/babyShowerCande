@@ -11,15 +11,16 @@ import imgUno from "../assets/carousel/foto1.jpg";
 import imgDos from "../assets/carousel/foto2.jpg";
 import imgTres from "../assets/carousel/foto4.jpg";
 import imgCuatro from "../assets/carousel/foto5.jpg";
-import imgCinco from "../assets/carousel/foto6.jpg";
+import imgCinco from "../assets/carousel/foto21.jpg";
 import imgSeis from "../assets/carousel/foto7.jpg";
 import imgSiete from "../assets/carousel/foto8.jpg";
 import imgOcho from "../assets/carousel/foto9.jpg";
 import imgNueve from "../assets/carousel/foto10.jpg";
-import imgDiez from "../assets/carousel/foto12.jpg";
+import imgDiez from "../assets/carousel/foto22.jpg";
 import imgOnce from "../assets/carousel/foto16.jpg";
 import imgDoce from "../assets/carousel/foto19.jpg";
 import imgTrece from "../assets/carousel/foto20.jpg";
+import imgCatorce from "../assets/carousel/foto24.jpg";
 
 const Landing = () => {
   const auth = useUserContext();
@@ -54,43 +55,46 @@ const Landing = () => {
           <>
             <div className="media-scroller snaps-inline">
               <div className="media-element">
-                <img src={imgUno} alt="fotouno" />
+                <img src={imgUno} alt="foto" />
               </div>
               <div className="media-element">
-                <img src={imgDos} alt="" />
+                <img src={imgDos} alt="foto" />
               </div>
               <div className="media-element">
-                <img src={imgTres} alt="" />
+                <img src={imgCatorce} alt="foto" />
               </div>
               <div className="media-element">
-                <img src={imgCuatro} alt="" />
+                <img src={imgTres} alt="foto" />
               </div>
               <div className="media-element">
-                <img src={imgTrece} alt="" />
+                <img src={imgCuatro} alt="foto" />
               </div>
               <div className="media-element">
-                <img src={imgCinco} alt="" />
+                <img src={imgTrece} alt="foto" />
               </div>
               <div className="media-element">
-                <img src={imgSeis} alt="" />
+                <img src={imgCinco} alt="foto" />
               </div>
               <div className="media-element">
-                <img src={imgSiete} alt="" />
+                <img src={imgSeis} alt="foto" />
               </div>
               <div className="media-element">
-                <img src={imgOcho} alt="" />
+                <img src={imgSiete} alt="foto" />
               </div>
               <div className="media-element">
-                <img src={imgDoce} alt="" />
+                <img src={imgOcho} alt="foto" />
               </div>
               <div className="media-element">
-                <img src={imgNueve} alt="" />
+                <img src={imgDoce} alt="foto" />
               </div>
               <div className="media-element">
-                <img src={imgDiez} alt="" />
+                <img src={imgNueve} alt="foto" />
               </div>
               <div className="media-element">
-                <img src={imgOnce} alt="" />
+                <img src={imgDiez} alt="foto" />
+              </div>
+              <div className="media-element">
+                <img src={imgOnce} alt="foto" />
               </div>
             </div>
           </>
