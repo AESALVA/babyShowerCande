@@ -8,20 +8,25 @@ import Landing from "./Landing";
 import ResetPassword from "./ResetPassword";
 import Contact from "./Contact";
 import About from "./About";
+import {
+  useUserContext,
+  useLoadedContext,
+  useValidationContext,
+} from "../UserProvider";
 
 
 const Header = () => {
+  const auth = useUserContext();
+
   return (
       <div className="GlassContainer">
-      <Routes>
+        {auth.auth.name?(<><Landing /></>):(<><Routes>
           <Route path="/" element={<Landing />} />
           <Route path="/babyShowerCande/Login" element={<Login />} />
           <Route path="/babyShowerCande/Register" element={<Register />} />
           <Route path="/babyShowerCande/PassRecovery" element={<PassRecovery />} />
           <Route path="/babyShowerCande/ResetPassword" element={<ResetPassword />} />
-          <Route path="/babyShowerCande/About" element={<About />} />
-          <Route path="/babyShowerCande/Contact" element={<Contact   />} />
-        </Routes>
+      </Routes></>)}
       </div>
   );
 };

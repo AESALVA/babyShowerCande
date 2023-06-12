@@ -36,7 +36,12 @@ text-align: center;
     color: white;
   }
 }
-
+.TextContact{
+  color:#b700ff ;
+}
+.UnderLine{
+  text-decoration: underline;
+}
 @media (max-width: 900px) {
   .text {
     padding: 1rem;

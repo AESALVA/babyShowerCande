@@ -37,7 +37,7 @@ const NavBar = () => {
 
   return (
     <>
-      <div id="Home" className="ContainerNavBar">
+      <div id="/" className="ContainerNavBar">
         <h2>Candelaria</h2>
         <ul className="NavList">
           <li>
@@ -62,17 +62,16 @@ const NavBar = () => {
                 <NavLink onClick={auth.logout}><FontAwesomeIcon icon={faUser} />{'  '}{auth.auth.name}</NavLink>
               </OverlayTrigger>
             )}
-          </li>
-          <li>
-            <NavLink to="/babyShowerCande/About">
+          </li>{auth.auth.name&&(<><li>
+            <Nav.Link href="#About">
               <FontAwesomeIcon icon={faFolderOpen} /> Mi nombre
-            </NavLink>
+            </Nav.Link>
           </li>
           <li>
-            <NavLink to="/babyShowerCande/Contact">
+            <Nav.Link href="#Contact">
               <FontAwesomeIcon icon={faEnvelopeCircleCheck} /> Regalos
-            </NavLink>
-          </li>
+            </Nav.Link>
+          </li></>)}
         </ul>
         <div className="BarsMenu">
           {menuResponsive==='NavListResponsive'?(<FontAwesomeIcon icon={faBars} onClick={handleMenu} />):(<FontAwesomeIcon icon={faX  } onClick={handleMenu} />)} 
@@ -89,17 +88,16 @@ const NavBar = () => {
             ) : (
               <NavLink onClick={auth.logout}><FontAwesomeIcon icon={faUser} />{'  '}{auth.auth.name}</NavLink>
             )}
-          </li>
-          <li>
-            <NavLink to="/babyShowerCande/About">
+          </li>{auth.auth.name&&(<><li>
+            <Nav.Link href="#About">
               <FontAwesomeIcon icon={faFolderOpen} /> Mi nombre
-            </NavLink>
+            </Nav.Link>
           </li>
           <li>
-            <NavLink to="/babyShowerCande/Contact">
+            <Nav.Link href="#Contact">
               <FontAwesomeIcon icon={faEnvelopeCircleCheck} /> Regalos
-            </NavLink>
-          </li>
+            </Nav.Link>
+          </li></>)}
         </ul>
       </div>
     </>
