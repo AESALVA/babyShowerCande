@@ -54,14 +54,14 @@ const Landing = () => {
         ) : (
           <>
             <div className="media-scroller snaps-inline">
+            <div className="media-element">
+                <img src={imgCatorce} alt="foto" />
+              </div>
               <div className="media-element">
                 <img src={imgUno} alt="foto" />
               </div>
               <div className="media-element">
                 <img src={imgDos} alt="foto" />
-              </div>
-              <div className="media-element">
-                <img src={imgCatorce} alt="foto" />
               </div>
               <div className="media-element">
                 <img src={imgTres} alt="foto" />
