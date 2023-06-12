@@ -45,7 +45,7 @@ const NavBar = () => {
               <FontAwesomeIcon icon={faHouse} /> Inicio
             </NavLink>
           </li>
-          <li>
+          {auth.auth.name&&(<><li>
             {!auth.auth.name ? (
               <>
                 <NavLink to="/babyShowerCande/Login">
@@ -62,7 +62,7 @@ const NavBar = () => {
                 <NavLink onClick={auth.logout}><FontAwesomeIcon icon={faUser} />{'  '}{auth.auth.name}</NavLink>
               </OverlayTrigger>
             )}
-          </li>{auth.auth.name&&(<><li>
+          </li><li>
             <Nav.Link href="#About">
               <FontAwesomeIcon icon={faFolderOpen} /> Mi nombre
             </Nav.Link>
@@ -82,13 +82,13 @@ const NavBar = () => {
               <FontAwesomeIcon icon={faHouse} /> Inicio
             </NavLink>
           </li>
-          <li>
+          {auth.auth.name&&(<><li>
             {!auth.auth.name ? (
               <NavLink to="/babyShowerCande/Login"><FontAwesomeIcon icon={faUser} />{' '}Ingresar</NavLink>
             ) : (
               <NavLink onClick={auth.logout}><FontAwesomeIcon icon={faUser} />{'  '}{auth.auth.name}</NavLink>
             )}
-          </li>{auth.auth.name&&(<><li>
+          </li><li>
             <Nav.Link href="#About">
               <FontAwesomeIcon icon={faFolderOpen} /> Mi nombre
             </Nav.Link>

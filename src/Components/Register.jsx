@@ -205,7 +205,7 @@ const Register = () => {
             </label>
             <p className="d-flex justify-content-center py-2">
              Una letra mayúscula, una letra minúscula. Entre 8 y 20
-              caracteres.
+              caracteres. Un numero del 0 al 9.
             </p>
           </div>
           <div onClick={() => handleClick()} className="btn">
