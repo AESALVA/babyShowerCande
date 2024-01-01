@@ -11,6 +11,7 @@ import { faTrashCan } from "@fortawesome/free-solid-svg-icons";
 const Dashboard = () => {
   const Validation = useValidationContext();
   const auth = useUserContext();
+  const load = useLoadedContext();
 
   const [message, setMessage] = useState({ comment: "", user: "" });
   const [firstMessage, setFirstMessage] = useState(true);
@@ -32,22 +33,23 @@ const Dashboard = () => {
   };
 
   const deleteMessage = (id) => {
+    load.setIsLoaded(true)
     fetch(`https://babyshowerback.vercel.app/Comments/delete/${id}`, {
       method: "DELETE",
       headers: { "Content-Type": "application/json" },
-    });
+    }).finally(()=>load.setIsLoaded(false));
   };
 
   useEffect(() => {
     fetch("https://babyshowerback.vercel.app/Comments/all")
       .then((res) => res.json())
-      .then((json) => setContainerMessages(json));
-  }, [auth.auth,deleteMessage]);
+      .then((json) => setContainerMessages(json))
+     
+  }, []);
 
   useEffect(() => {
     setFirstMessage(true);
   }, [message]);
-
   return (
     <>
       <div className="ContainerDashboard">
